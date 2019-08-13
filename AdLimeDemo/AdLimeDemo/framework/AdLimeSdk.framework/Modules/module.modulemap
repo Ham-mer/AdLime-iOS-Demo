@@ -1,0 +1,6 @@
+framework module AdLimeSdk {
+  umbrella header "AdLimeSdk.h"
+
+  export *
+  module * { export * }
+}
