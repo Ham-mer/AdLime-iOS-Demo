@@ -109,7 +109,7 @@
 
 
 - (void)testBanner {
-    UIView *banner = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight-kBottomSafeHeight-70, ScreenWidth, 70)];
+    UIView *banner = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight-kBottomSafeHeight-270, ScreenWidth, 270)];
     [banner setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:banner];
     self.banner = banner;
@@ -128,7 +128,7 @@
 - (void)adLimeBannerDidReceiveAd:(AdLimeBannerView *)bannerView{
     self.banner.hidden = NO;
     CGFloat x = (ScreenWidth-320)/2;
-    bannerView.frame = CGRectMake(x, 10, 320, 50);
+    bannerView.frame = CGRectMake(x, 10, 320, 250);
 }
 
 - (void)adLimeBanner:(AdLimeBannerView *)bannerView didFailToReceiveAdWithError:(AdLimeAdError *)adError {
@@ -174,7 +174,7 @@
 }
 
 - (void) loadNative {
-    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(10, ScreenHeight-kBottomSafeHeight-70-270, ScreenWidth-20, 250)];
+    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(10, ScreenHeight-kBottomSafeHeight-270-270, ScreenWidth-20, 250)];
     
     [adView setBackgroundColor:[UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]];
     [self.view addSubview:adView];
