@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 @import AdLimeSdk;
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +20,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AdLime initWithAppId:@"1e68d89e-ee81-47bc-ab4b-f79c09e5c561"];
     [AdLime setGdprConsent:true];
-    [AdLime setTestMode:YES];
+   // [AdLime setTestMode:YES];
     [AdLime setLogEnable:YES];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    HomeViewController *vc = [[HomeViewController alloc] init];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

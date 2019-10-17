@@ -3,33 +3,56 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D48F802D2302B89E0028135D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F802C2302B89E0028135D /* AppDelegate.m */; };
-		D48F80302302B89E0028135D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F802F2302B89E0028135D /* ViewController.m */; };
-		D48F80332302B89E0028135D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F80312302B89E0028135D /* Main.storyboard */; };
 		D48F80352302B89F0028135D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48F80342302B89F0028135D /* Assets.xcassets */; };
 		D48F80382302B89F0028135D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F80362302B89F0028135D /* LaunchScreen.storyboard */; };
 		D48F803B2302B89F0028135D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F803A2302B89F0028135D /* main.m */; };
-		D48F80442302B9320028135D /* AdLimeSdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D48F80422302B9320028135D /* AdLimeSdk.bundle */; };
-		D48F80452302B9320028135D /* AdLimeSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F80432302B9320028135D /* AdLimeSdk.framework */; };
+		D4C2DAD823580FEE00524075 /* AdTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAD723580FEE00524075 /* AdTypeViewController.m */; };
+		D4C2DADB23580FF800524075 /* BannerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAD923580FF700524075 /* BannerTestViewController.m */; };
+		D4C2DADE2358100300524075 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DADD2358100300524075 /* HomeViewController.m */; };
+		D4C2DAE42358100D00524075 /* InterstitialTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAE22358100D00524075 /* InterstitialTestViewController.m */; };
+		D4C2DAE52358100D00524075 /* LoadModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAE32358100D00524075 /* LoadModelViewController.m */; };
+		D4C2DAEE2358101800524075 /* RewardedVideoTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAEA2358101700524075 /* RewardedVideoTestViewController.m */; };
+		D4C2DAEF2358101800524075 /* MediationTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAEB2358101700524075 /* MediationTestViewController.m */; };
+		D4C2DAF02358101800524075 /* NativeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAEC2358101700524075 /* NativeTestViewController.m */; };
+		D4C2DAF12358101800524075 /* NetworkTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAED2358101700524075 /* NetworkTestViewController.m */; };
+		EE8B0990B91AF3B9F45ACAA3 /* Pods_AdLimeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57075ED4FEBC187AD1F939EC /* Pods-AdLimeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLimeDemo.debug.xcconfig"; path = "Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9A477D01FA72F96A8D2E6A2D /* Pods-AdLimeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLimeDemo.release.xcconfig"; path = "Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdLimeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48F80282302B89E0028135D /* AdLimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdLimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48F802B2302B89E0028135D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D48F802C2302B89E0028135D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D48F802E2302B89E0028135D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D48F802F2302B89E0028135D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D48F80322302B89E0028135D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D48F80342302B89F0028135D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48F80372302B89F0028135D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48F80392302B89F0028135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D48F803A2302B89F0028135D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D48F80422302B9320028135D /* AdLimeSdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AdLimeSdk.bundle; sourceTree = "<group>"; };
-		D48F80432302B9320028135D /* AdLimeSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdLimeSdk.framework; sourceTree = "<group>"; };
+		D4C2DAD623580FEE00524075 /* AdTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTypeViewController.h; sourceTree = "<group>"; };
+		D4C2DAD723580FEE00524075 /* AdTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTypeViewController.m; sourceTree = "<group>"; };
+		D4C2DAD923580FF700524075 /* BannerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerTestViewController.m; sourceTree = "<group>"; };
+		D4C2DADA23580FF800524075 /* BannerTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerTestViewController.h; sourceTree = "<group>"; };
+		D4C2DADC2358100300524075 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D4C2DADD2358100300524075 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D4C2DADF2358100C00524075 /* macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macro.h; sourceTree = "<group>"; };
+		D4C2DAE02358100C00524075 /* LoadModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadModelViewController.h; sourceTree = "<group>"; };
+		D4C2DAE12358100D00524075 /* InterstitialTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialTestViewController.h; sourceTree = "<group>"; };
+		D4C2DAE22358100D00524075 /* InterstitialTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialTestViewController.m; sourceTree = "<group>"; };
+		D4C2DAE32358100D00524075 /* LoadModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadModelViewController.m; sourceTree = "<group>"; };
+		D4C2DAE62358101700524075 /* NativeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeTestViewController.h; sourceTree = "<group>"; };
+		D4C2DAE72358101700524075 /* RewardedVideoTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedVideoTestViewController.h; sourceTree = "<group>"; };
+		D4C2DAE82358101700524075 /* MediationTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationTestViewController.h; sourceTree = "<group>"; };
+		D4C2DAE92358101700524075 /* NetworkTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTestViewController.h; sourceTree = "<group>"; };
+		D4C2DAEA2358101700524075 /* RewardedVideoTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoTestViewController.m; sourceTree = "<group>"; };
+		D4C2DAEB2358101700524075 /* MediationTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationTestViewController.m; sourceTree = "<group>"; };
+		D4C2DAEC2358101700524075 /* NativeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeTestViewController.m; sourceTree = "<group>"; };
+		D4C2DAED2358101700524075 /* NetworkTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,18 +60,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48F80452302B9320028135D /* AdLimeSdk.framework in Frameworks */,
+				EE8B0990B91AF3B9F45ACAA3 /* Pods_AdLimeDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E2FDF4B016EA3D995964C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57075ED4FEBC187AD1F939EC /* Pods-AdLimeDemo.debug.xcconfig */,
+				9A477D01FA72F96A8D2E6A2D /* Pods-AdLimeDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CFD1ED5558A3A2B2571C0CDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D48F801F2302B89E0028135D = {
 			isa = PBXGroup;
 			children = (
 				D48F802A2302B89E0028135D /* AdLimeDemo */,
 				D48F80292302B89E0028135D /* Products */,
+				00E2FDF4B016EA3D995964C5 /* Pods */,
+				CFD1ED5558A3A2B2571C0CDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,27 +105,33 @@
 		D48F802A2302B89E0028135D /* AdLimeDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D48F80412302B9320028135D /* framework */,
+				D4C2DAD623580FEE00524075 /* AdTypeViewController.h */,
+				D4C2DAD723580FEE00524075 /* AdTypeViewController.m */,
+				D4C2DADA23580FF800524075 /* BannerTestViewController.h */,
+				D4C2DAD923580FF700524075 /* BannerTestViewController.m */,
+				D4C2DADC2358100300524075 /* HomeViewController.h */,
+				D4C2DADD2358100300524075 /* HomeViewController.m */,
+				D4C2DAE12358100D00524075 /* InterstitialTestViewController.h */,
+				D4C2DAE22358100D00524075 /* InterstitialTestViewController.m */,
+				D4C2DAE02358100C00524075 /* LoadModelViewController.h */,
+				D4C2DAE32358100D00524075 /* LoadModelViewController.m */,
+				D4C2DAE82358101700524075 /* MediationTestViewController.h */,
+				D4C2DAEB2358101700524075 /* MediationTestViewController.m */,
+				D4C2DAE62358101700524075 /* NativeTestViewController.h */,
+				D4C2DAEC2358101700524075 /* NativeTestViewController.m */,
+				D4C2DAE92358101700524075 /* NetworkTestViewController.h */,
+				D4C2DAED2358101700524075 /* NetworkTestViewController.m */,
+				D4C2DAE72358101700524075 /* RewardedVideoTestViewController.h */,
+				D4C2DAEA2358101700524075 /* RewardedVideoTestViewController.m */,
+				D4C2DADF2358100C00524075 /* macro.h */,
 				D48F802B2302B89E0028135D /* AppDelegate.h */,
 				D48F802C2302B89E0028135D /* AppDelegate.m */,
-				D48F802E2302B89E0028135D /* ViewController.h */,
-				D48F802F2302B89E0028135D /* ViewController.m */,
-				D48F80312302B89E0028135D /* Main.storyboard */,
 				D48F80342302B89F0028135D /* Assets.xcassets */,
 				D48F80362302B89F0028135D /* LaunchScreen.storyboard */,
 				D48F80392302B89F0028135D /* Info.plist */,
 				D48F803A2302B89F0028135D /* main.m */,
 			);
 			path = AdLimeDemo;
-			sourceTree = "<group>";
-		};
-		D48F80412302B9320028135D /* framework */ = {
-			isa = PBXGroup;
-			children = (
-				D48F80422302B9320028135D /* AdLimeSdk.bundle */,
-				D48F80432302B9320028135D /* AdLimeSdk.framework */,
-			);
-			path = framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D48F803E2302B89F0028135D /* Build configuration list for PBXNativeTarget "AdLimeDemo" */;
 			buildPhases = (
+				C4AB76B7CAC60BB98FDA8C10 /* [CP] Check Pods Manifest.lock */,
 				D48F80242302B89E0028135D /* Sources */,
 				D48F80252302B89E0028135D /* Frameworks */,
 				D48F80262302B89E0028135D /* Resources */,
+				0F437984FBC61B4CCC0522FF /* [CP] Embed Pods Frameworks */,
+				19D2180CC1C9CC703E7AE0B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,35 +196,92 @@
 			files = (
 				D48F80382302B89F0028135D /* LaunchScreen.storyboard in Resources */,
 				D48F80352302B89F0028135D /* Assets.xcassets in Resources */,
-				D48F80442302B9320028135D /* AdLimeSdk.bundle in Resources */,
-				D48F80332302B89E0028135D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F437984FBC61B4CCC0522FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19D2180CC1C9CC703E7AE0B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4AB76B7CAC60BB98FDA8C10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdLimeDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D48F80242302B89E0028135D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48F80302302B89E0028135D /* ViewController.m in Sources */,
+				D4C2DAF02358101800524075 /* NativeTestViewController.m in Sources */,
+				D4C2DAE42358100D00524075 /* InterstitialTestViewController.m in Sources */,
+				D4C2DAF12358101800524075 /* NetworkTestViewController.m in Sources */,
 				D48F803B2302B89F0028135D /* main.m in Sources */,
+				D4C2DADB23580FF800524075 /* BannerTestViewController.m in Sources */,
+				D4C2DAE52358100D00524075 /* LoadModelViewController.m in Sources */,
 				D48F802D2302B89E0028135D /* AppDelegate.m in Sources */,
+				D4C2DAD823580FEE00524075 /* AdTypeViewController.m in Sources */,
+				D4C2DAEF2358101800524075 /* MediationTestViewController.m in Sources */,
+				D4C2DADE2358100300524075 /* HomeViewController.m in Sources */,
+				D4C2DAEE2358101800524075 /* RewardedVideoTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D48F80312302B89E0028135D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D48F80322302B89E0028135D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D48F80362302B89F0028135D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -299,19 +407,25 @@
 		};
 		D48F803F2302B89F0028135D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57075ED4FEBC187AD1F939EC /* Pods-AdLimeDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4YN27W2S8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdLimeDemo/framework",
 				);
 				INFOPLIST_FILE = AdLimeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adlime.AdLimeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,19 +434,25 @@
 		};
 		D48F80402302B89F0028135D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A477D01FA72F96A8D2E6A2D /* Pods-AdLimeDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4YN27W2S8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdLimeDemo/framework",
 				);
 				INFOPLIST_FILE = AdLimeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adlime.AdLimeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

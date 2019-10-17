@@ -1,0 +1,206 @@
+PODS:
+  - AdColony (4.1.1)
+  - AdGeneration (2.15.2)
+  - AdLimeMediation_AdColony (4.1.1.0):
+    - AdColony (= 4.1.1)
+    - AdLimeSdk
+  - AdLimeMediation_AdGeneration (2.15.2.0):
+    - AdGeneration (= 2.15.2)
+    - AdLimeSdk
+  - AdLimeMediation_Amazon (2.2.17.2):
+    - AdLimeSdk
+    - AmazonAdSDK (= 2.0.16)
+  - AdLimeMediation_AppLovin (6.9.4.0):
+    - AdLimeSdk
+    - AppLovinSDK (~> 6.9.4)
+  - AdLimeMediation_Chartboost (8.0.1.2):
+    - AdLimeSdk
+    - ChartboostSDK (~> 8.0.1)
+  - AdLimeMediation_Facebook (5.5.1.0):
+    - AdLimeSdk
+    - FBAudienceNetwork (~> 5.5.1)
+  - AdLimeMediation_Flurry (10.0.2.0):
+    - AdLimeSdk
+    - Flurry-iOS-SDK/FlurryAds (~> 10.0.2)
+    - Flurry-iOS-SDK/FlurrySDK (~> 10.0.2)
+  - AdLimeMediation_GoogleAds (7.50.0.0):
+    - AdLimeSdk
+    - Google-Mobile-Ads-SDK (~> 7.50.0)
+  - AdLimeMediation_IronSource (6.8.7.0.0):
+    - AdLimeSdk
+    - IronSourceSDK (~> 6.8.7.0)
+  - AdLimeMediation_Maio (1.4.8.0):
+    - AdLimeSdk
+    - MaioSDK (~> 1.4.8)
+  - AdLimeMediation_MoPub (5.9.0.0):
+    - AdLimeSdk
+    - mopub-ios-sdk (~> 5.9.0)
+  - AdLimeMediation_Nend (5.3.0.0):
+    - AdLimeSdk
+    - NendSDK_iOS (~> 5.3.0)
+  - AdLimeMediation_TikTok (2.4.6.3.1):
+    - AdLimeSdk
+    - Bytedance-UnionAD (~> 2.4.6.3)
+  - AdLimeMediation_UnityAds (3.3.0.0):
+    - AdLimeSdk
+    - UnityAds (~> 3.3.0)
+  - AdLimeMediation_Vungle (6.4.5.0):
+    - AdLimeSdk
+    - VungleSDK-iOS (~> 6.4.5)
+  - AdLimeSdk (1.3.5)
+  - AmazonAdSDK (2.0.16)
+  - AppLovinSDK (6.9.5)
+  - Bytedance-UnionAD (2.4.6.7)
+  - ChartboostSDK (8.0.1)
+  - FBAudienceNetwork (5.5.1):
+    - FBSDKCoreKit/Basics (>= 5.2.1)
+  - FBSDKCoreKit/Basics (5.8.0)
+  - Flurry-iOS-SDK/FlurryAds (10.0.2):
+    - Flurry-iOS-SDK/FlurrySDK (~> 10.0.2)
+  - Flurry-iOS-SDK/FlurrySDK (10.0.2)
+  - Google-Mobile-Ads-SDK (7.50.0):
+    - GoogleAppMeasurement (~> 6.0)
+  - GoogleAppMeasurement (6.1.3):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 0.3.901)
+  - GoogleUtilities/AppDelegateSwizzler (6.3.1):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.3.1)
+  - GoogleUtilities/Logger (6.3.1):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.3.1):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.3.1):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.3.1)"
+  - GoogleUtilities/Reachability (6.3.1):
+    - GoogleUtilities/Logger
+  - IronSourceSDK (6.8.7.0)
+  - MaioSDK (1.4.8)
+  - Masonry (1.1.0)
+  - mopub-ios-sdk (5.9.0):
+    - mopub-ios-sdk/MoPubSDK (= 5.9.0)
+  - mopub-ios-sdk/Avid (5.9.0):
+    - mopub-ios-sdk/Core
+  - mopub-ios-sdk/Core (5.9.0)
+  - mopub-ios-sdk/Moat (5.9.0):
+    - mopub-ios-sdk/Core
+  - mopub-ios-sdk/MoPubSDK (5.9.0):
+    - mopub-ios-sdk/Avid
+    - mopub-ios-sdk/Core
+    - mopub-ios-sdk/Moat
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
+  - NendSDK_iOS (5.3.0)
+  - UnityAds (3.3.0)
+  - VungleSDK-iOS (6.4.5)
+
+DEPENDENCIES:
+  - AdLimeMediation_AdColony
+  - AdLimeMediation_AdGeneration
+  - AdLimeMediation_Amazon
+  - AdLimeMediation_AppLovin
+  - AdLimeMediation_Chartboost
+  - AdLimeMediation_Facebook
+  - AdLimeMediation_Flurry
+  - AdLimeMediation_GoogleAds
+  - AdLimeMediation_IronSource
+  - AdLimeMediation_Maio
+  - AdLimeMediation_MoPub
+  - AdLimeMediation_Nend
+  - AdLimeMediation_TikTok
+  - AdLimeMediation_UnityAds
+  - AdLimeMediation_Vungle
+  - AdLimeSdk
+  - Masonry
+
+SPEC REPOS:
+  trunk:
+    - AdColony
+    - AdGeneration
+    - AdLimeMediation_AdColony
+    - AdLimeMediation_AdGeneration
+    - AdLimeMediation_Amazon
+    - AdLimeMediation_AppLovin
+    - AdLimeMediation_Chartboost
+    - AdLimeMediation_Facebook
+    - AdLimeMediation_Flurry
+    - AdLimeMediation_GoogleAds
+    - AdLimeMediation_IronSource
+    - AdLimeMediation_Maio
+    - AdLimeMediation_MoPub
+    - AdLimeMediation_Nend
+    - AdLimeMediation_TikTok
+    - AdLimeMediation_UnityAds
+    - AdLimeMediation_Vungle
+    - AdLimeSdk
+    - AmazonAdSDK
+    - AppLovinSDK
+    - Bytedance-UnionAD
+    - ChartboostSDK
+    - FBAudienceNetwork
+    - FBSDKCoreKit
+    - Flurry-iOS-SDK
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
+    - IronSourceSDK
+    - MaioSDK
+    - Masonry
+    - mopub-ios-sdk
+    - nanopb
+    - NendSDK_iOS
+    - UnityAds
+    - VungleSDK-iOS
+
+SPEC CHECKSUMS:
+  AdColony: bc18ed5b7cd138b547f602e9da1572b0140396ee
+  AdGeneration: 36d8f2bdb4513488244df9112ea18cc530f85a24
+  AdLimeMediation_AdColony: ba812fa76efdc4daa5a573baa62e72308b5fb2a1
+  AdLimeMediation_AdGeneration: a495ba6b00387cea902749077afd8d69620f1def
+  AdLimeMediation_Amazon: 1d0dd03175a5085c0214d2494fa13c6f57ce94ae
+  AdLimeMediation_AppLovin: 330289eb9673de0462ab236529372e6e3e7da201
+  AdLimeMediation_Chartboost: e60440f43137e4588c52aab06bddc69ba584eae6
+  AdLimeMediation_Facebook: 576dc869d655248e2054b69f8d078f55ba7beac3
+  AdLimeMediation_Flurry: e56b430be3f5331d03ccb54a64ea23956ff26e6e
+  AdLimeMediation_GoogleAds: 4f2f9ea6546175d6bb19655e7bf68db9ab9dd532
+  AdLimeMediation_IronSource: 0995024cd5f1c65bbe0aebff53728a083cf44108
+  AdLimeMediation_Maio: e27eed6c1c063f4555da37228e8ba0db6585fad3
+  AdLimeMediation_MoPub: 9bfae7368b451f79bc896752bf80c5e064abb392
+  AdLimeMediation_Nend: ab30a2c9aecd3b1eb4e150a18132845d1bebfe32
+  AdLimeMediation_TikTok: 5317aa8e87637c0f0285fea7d7a39e7b8ff6d21a
+  AdLimeMediation_UnityAds: 8c96cfef96a9cf49cf15914c4b1f28e2416fdb36
+  AdLimeMediation_Vungle: 6651d65f5a69a4a7911961f838f0929b67adea29
+  AdLimeSdk: 954b10ab347b7572643ba884d53a420b5c325f33
+  AmazonAdSDK: d904f74444fa9bbf671ced9cf5abc9d9de41cdc5
+  AppLovinSDK: 15268696b789c0954520ca95022fe2453bc41291
+  Bytedance-UnionAD: 794d75a1af5f3635e0c2ea9d6f74720b56dba43e
+  ChartboostSDK: 28c7d73f75d34afbc2b9fdcf993382132cf0569a
+  FBAudienceNetwork: 783ff4808b0b59d0eb294dd94eb251f46e0ce5c9
+  FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
+  Flurry-iOS-SDK: 71da0ebf2088b15d8899da71050efc8b33bfd21f
+  Google-Mobile-Ads-SDK: d48dbaf5bae1ab7a94a9786f493c26c454bc6f16
+  GoogleAppMeasurement: 434cc7be25e71dc04b8d0e3079125127b330e84a
+  GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
+  IronSourceSDK: 23501d62c9b545244d58d5da02e4926ff6382b91
+  MaioSDK: 739514080b0d9c3b3e3457c90b53fec2ee1d5cc2
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  mopub-ios-sdk: 7a5d264dc92c3e6c791bdcd476a2602f71acf331
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  NendSDK_iOS: 42684cd12395127ea6cf113009ecb4714cc87fe3
+  UnityAds: 0b7ecf8df83e8a3d62122a3fcf61e47c8e848f3c
+  VungleSDK-iOS: 8951559521dd73c3f947757e9a4c4bbfd8645b7f
+
+PODFILE CHECKSUM: 6d70a22f34ef37c48639d72a33c8bba3795b5057
+
+COCOAPODS: 1.8.3
