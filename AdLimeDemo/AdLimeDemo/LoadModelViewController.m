@@ -46,7 +46,7 @@
     UIButton *SerilLoadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     [self.view addSubview:SerilLoadBtn];
-    [SerilLoadBtn setTitle:@"SerilLoad" forState:UIControlStateNormal];
+    [SerilLoadBtn setTitle:@"SerialLoad" forState:UIControlStateNormal];
     [SerilLoadBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     [SerilLoadBtn setTitleColor:[UIColor colorWithRed:135.0/255.0 green:216.0/255.0 blue:80.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];
     SerilLoadBtn.tag = 0;
@@ -100,20 +100,20 @@
     vc.modalPresentationStyle = 0;
     switch (btn.tag) {
         case 0:{
-            NSArray *ads = @[@[@"Banner", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Interstitial", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Native", @"3f733527-5202-4869-b148-73962fadbb88"], @[@"RewardedVideo", @"f5f0cdb5-b18f-4e56-82f4-00d5238b31b0"]];
+            NSArray *ads = @[@[@"Banner", @"11593002-54c8-4073-ae44-9e602497713e"], @[@"Interstitial", @"a86517a3-a6dd-49e0-bd13-4de18c2c2890"], @[@"Native", @"092153e3-15d6-47d6-8df2-312e084ea114"], @[@"RewardedVideo", @"d614a31c-5ca9-4bf0-aab0-e63e233febba"]];
             vc.adsDic = ads;
-            vc.titleStr = @"Seril Load";
+            vc.titleStr = @"Serial Load";
         }
             break;
         case 1: {
-            NSArray *ads = @[@[@"Banner", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Interstitial", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Native", @"3f733527-5202-4869-b148-73962fadbb88"], @[@"RewardedVideo", @"f5f0cdb5-b18f-4e56-82f4-00d5238b31b0"]];
+            NSArray *ads = @[@[@"Banner", @"1b046ba2-cd3f-48b9-87a0-f8420265bccf"], @[@"Interstitial", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Native", @"9fecf3e0-5948-41ce-80ea-2be49bf83319"], @[@"RewardedVideo", @"57671db6-9108-418b-8e4a-b7ff1851e721"]];
             vc.adsDic = ads;
-            vc.titleStr = @"Parllel Test";
+            vc.titleStr = @"Parallel Test";
         }
             break;
         case 2:
         default: {
-            NSArray *ads = @[@[@"Banner", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Interstitial", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Native", @"3f733527-5202-4869-b148-73962fadbb88"], @[@"RewardedVideo", @"f5f0cdb5-b18f-4e56-82f4-00d5238b31b0"]];
+            NSArray *ads = @[@[@"Banner", @"8f6c480b-de3e-42ee-a19a-d19400d2c19a"], @[@"Interstitial", @"6e9f7a0c-21a1-4098-8747-05c20f1020a2"], @[@"Native", @"4de59549-9008-4a55-b40c-e866450128ca"], @[@"RewardedVideo", @"982b457f-c890-409e-a077-7473620c434b"]];
             vc.adsDic = ads;
             vc.titleStr = @"Suffle Test";
         }

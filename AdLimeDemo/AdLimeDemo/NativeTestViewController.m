@@ -37,6 +37,15 @@
         make.bottom.equalTo(self.view.mas_top).offset(kTopBarSafeHeight+20);
     }];
     
+    UILabel *titleLab =  [[UILabel alloc]init];
+    titleLab.text = self.titleStr;
+    [titleLab setTextAlignment:NSTextAlignmentCenter];
+    [header addSubview:titleLab];
+    [titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(header);
+        make.width.equalTo(@(250));
+    }];
+    
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [header addSubview:backBtn];
     
@@ -50,7 +59,7 @@
     }];
     
     UIButton *loadNativeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    loadNativeBtn.frame = CGRectMake(20, kTopBarSafeHeight+20, 150, 30);
+    loadNativeBtn.frame = CGRectMake(20, kTopBarSafeHeight+50, 150, 30);
     [self.view addSubview:loadNativeBtn];
     [loadNativeBtn setTitle:@"load Native" forState:UIControlStateNormal];
     //[loadNativeBtn setBackgroundColor:[UIColor blueColor]];
@@ -61,7 +70,7 @@
     
     CGFloat left = ScreenWidth - 150 - 20;
     UIButton *showNativeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    showNativeBtn.frame = CGRectMake(left, kTopBarSafeHeight+20, 150, 30);
+    showNativeBtn.frame = CGRectMake(left, kTopBarSafeHeight+50, 150, 30);
     [self.view addSubview:showNativeBtn];
     [showNativeBtn setTitle:@"show Native" forState:UIControlStateNormal];
     //[showNativeBtn setBackgroundColor:[UIColor blueColor]];

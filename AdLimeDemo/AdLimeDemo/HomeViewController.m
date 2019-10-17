@@ -98,7 +98,7 @@
 }
 
 - (void) testMediation {
-    [AdLime initWithAppId:@"fc0840a5-64f5-44a2-8067-1e66643c37fb"];
+    [AdLime initWithAppId:@"85f1d986-88e3-42f5-bd55-ffedea562215"];
     [AdLime setGdprConsent:true];
     [AdLime setTestMode:YES];
     [AdLime setLogEnable:YES];
