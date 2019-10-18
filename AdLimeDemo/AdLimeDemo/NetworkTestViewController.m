@@ -142,7 +142,7 @@
     }
     
     if (![ads[3] isEqualToString:@""]) {
-        [adTypes addObject: @[@"RewardedVideo", ads[1]]];
+        [adTypes addObject: @[@"RewardedVideo", ads[3]]];
     }
     adsTestVc.adsDic = [NSArray arrayWithArray:adTypes];
     
