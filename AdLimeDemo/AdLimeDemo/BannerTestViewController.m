@@ -55,6 +55,15 @@
         make.width.equalTo(@(50));
     }];
     
+    UIView *line = [[UIView alloc] init];
+    line.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:line];
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(header.mas_bottom).offset(1);
+        make.height.equalTo(@1);
+    }];
+    
     UIButton *testBannerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     testBannerBtn.frame = CGRectMake((ScreenWidth-200)/2, kTopBarSafeHeight+50, 200, 30);
     [self.view addSubview:testBannerBtn];
@@ -71,7 +80,11 @@
     [banner mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.top.equalTo(testBannerBtn.mas_bottom).offset(80);
-        make.height.equalTo(@(50));
+        if (self.bannerSize == ADLIME_BANNER_SIZE_300_250) {
+            make.height.equalTo(@(250));
+        } else {
+            make.height.equalTo(@(50));
+        }
     }];
     
     self.banner = banner;
@@ -102,8 +115,13 @@
 //    bannerView.frame = CGRectMake(x, 10, 320, 50);
     [bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.banner);
-        make.width.equalTo(@(320));
-        make.height.equalTo(@(50));
+        if (self.bannerSize == ADLIME_BANNER_SIZE_300_250) {
+            make.width.equalTo(@(300));
+            make.height.equalTo(@(250));
+        } else {
+            make.width.equalTo(@(320));
+            make.height.equalTo(@(50));
+        }
     }];
 }
 

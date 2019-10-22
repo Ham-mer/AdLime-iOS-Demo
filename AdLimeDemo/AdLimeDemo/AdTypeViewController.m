@@ -54,6 +54,15 @@
         make.centerY.equalTo(header);
         make.width.equalTo(@(50));
     }];
+    
+    UIView *line = [[UIView alloc] init];
+    line.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:line];
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(header.mas_bottom).offset(1);
+        make.height.equalTo(@1);
+    }];
        
     UITableView *AdTypeTab = [[UITableView alloc] init];
     AdTypeTab.delegate = self;
@@ -105,34 +114,38 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([_adsDic[indexPath.row][0] isEqualToString:@"Banner"]) {
+    if ([_adsDic[indexPath.row][0] isEqualToString:@"Banner_300*250"]) {
         BannerTestViewController *adsTestVc = [[BannerTestViewController alloc] init];
         adsTestVc.modalPresentationStyle = UIModalPresentationFullScreen;
         adsTestVc.adUnitID = _adsDic[indexPath.row][1];
         adsTestVc.titleStr = self.titleStr;
+        adsTestVc.bannerSize = ADLIME_BANNER_SIZE_300_250;
         [self presentViewController:adsTestVc animated:YES completion:nil];
-        
+    } else if ([_adsDic[indexPath.row][0] isEqualToString:@"Banner"]) {
+        BannerTestViewController *adsTestVc = [[BannerTestViewController alloc] init];
+        adsTestVc.modalPresentationStyle = UIModalPresentationFullScreen;
+        adsTestVc.adUnitID = _adsDic[indexPath.row][1];
+        adsTestVc.titleStr = self.titleStr;
+        adsTestVc.bannerSize = ADLIME_BANNER_SIZE_320_50;
+        [self presentViewController:adsTestVc animated:YES completion:nil];
     } else if ([_adsDic[indexPath.row][0] isEqualToString:@"Interstitial"]) {
         InterstitialTestViewController *adsTestVc = [[InterstitialTestViewController alloc] init];
         adsTestVc.modalPresentationStyle = UIModalPresentationFullScreen;
         adsTestVc.titleStr = self.titleStr;
         adsTestVc.adUnitID = _adsDic[indexPath.row][1];
         [self presentViewController:adsTestVc animated:YES completion:nil];
-        
     } else if ([_adsDic[indexPath.row][0] isEqualToString:@"Native"]) {
         NativeTestViewController *adsTestVc = [[NativeTestViewController alloc] init];
         adsTestVc.modalPresentationStyle = UIModalPresentationFullScreen;
         adsTestVc.titleStr = self.titleStr;
         adsTestVc.adUnitID = _adsDic[indexPath.row][1];
         [self presentViewController:adsTestVc animated:YES completion:nil];
-        
     } else if ([_adsDic[indexPath.row][0] isEqualToString:@"RewardedVideo"]) {
         RewardedVideoTestViewController *adsTestVc = [[RewardedVideoTestViewController alloc] init];
         adsTestVc.titleStr = self.titleStr;
         adsTestVc.modalPresentationStyle = UIModalPresentationFullScreen;
         adsTestVc.adUnitID = _adsDic[indexPath.row][1];
         [self presentViewController:adsTestVc animated:YES completion:nil];
-        
     }
     
 }

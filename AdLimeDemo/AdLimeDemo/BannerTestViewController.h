@@ -8,12 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, ADLIME_BANNER_SIZE) {
+    ADLIME_BANNER_SIZE_320_50 = 0,
+    ADLIME_BANNER_SIZE_300_250,
+};
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BannerTestViewController : UIViewController
 
 @property (nonatomic, strong) NSString *adUnitID;
 @property (nonatomic, strong) NSString *titleStr;
+
+@property (nonatomic) ADLIME_BANNER_SIZE bannerSize;
 
 @end
 

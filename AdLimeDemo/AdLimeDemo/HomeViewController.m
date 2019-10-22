@@ -79,7 +79,7 @@
     [AdLime setLogEnable:YES];
     
     AdTypeViewController *vc = [[AdTypeViewController alloc] init];
-    NSArray *ads = @[@[@"Banner", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Interstitial", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Native", @"3f733527-5202-4869-b148-73962fadbb88"], @[@"RewardedVideo", @"f5f0cdb5-b18f-4e56-82f4-00d5238b31b0"]];
+    NSArray *ads = @[@[@"Banner", @"01b52227-0296-434e-9acf-0cb73e817fd9"], @[@"Banner_300*250", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"],  @[@"Interstitial", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Native", @"3f733527-5202-4869-b148-73962fadbb88"], @[@"RewardedVideo", @"f5f0cdb5-b18f-4e56-82f4-00d5238b31b0"]];
     vc.adsDic = ads;
     vc.titleStr = @"Basic Test";
     vc.modalPresentationStyle = 0;

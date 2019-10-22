@@ -17,7 +17,6 @@
 		D4C2DAE42358100D00524075 /* InterstitialTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAE22358100D00524075 /* InterstitialTestViewController.m */; };
 		D4C2DAE52358100D00524075 /* LoadModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAE32358100D00524075 /* LoadModelViewController.m */; };
 		D4C2DAEE2358101800524075 /* RewardedVideoTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAEA2358101700524075 /* RewardedVideoTestViewController.m */; };
-		D4C2DAEF2358101800524075 /* MediationTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAEB2358101700524075 /* MediationTestViewController.m */; };
 		D4C2DAF02358101800524075 /* NativeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAEC2358101700524075 /* NativeTestViewController.m */; };
 		D4C2DAF12358101800524075 /* NetworkTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAED2358101700524075 /* NetworkTestViewController.m */; };
 		EE8B0990B91AF3B9F45ACAA3 /* Pods_AdLimeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */; };
@@ -47,10 +46,8 @@
 		D4C2DAE32358100D00524075 /* LoadModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadModelViewController.m; sourceTree = "<group>"; };
 		D4C2DAE62358101700524075 /* NativeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeTestViewController.h; sourceTree = "<group>"; };
 		D4C2DAE72358101700524075 /* RewardedVideoTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedVideoTestViewController.h; sourceTree = "<group>"; };
-		D4C2DAE82358101700524075 /* MediationTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationTestViewController.h; sourceTree = "<group>"; };
 		D4C2DAE92358101700524075 /* NetworkTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTestViewController.h; sourceTree = "<group>"; };
 		D4C2DAEA2358101700524075 /* RewardedVideoTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoTestViewController.m; sourceTree = "<group>"; };
-		D4C2DAEB2358101700524075 /* MediationTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationTestViewController.m; sourceTree = "<group>"; };
 		D4C2DAEC2358101700524075 /* NativeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeTestViewController.m; sourceTree = "<group>"; };
 		D4C2DAED2358101700524075 /* NetworkTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,8 +112,6 @@
 				D4C2DAE22358100D00524075 /* InterstitialTestViewController.m */,
 				D4C2DAE02358100C00524075 /* LoadModelViewController.h */,
 				D4C2DAE32358100D00524075 /* LoadModelViewController.m */,
-				D4C2DAE82358101700524075 /* MediationTestViewController.h */,
-				D4C2DAEB2358101700524075 /* MediationTestViewController.m */,
 				D4C2DAE62358101700524075 /* NativeTestViewController.h */,
 				D4C2DAEC2358101700524075 /* NativeTestViewController.m */,
 				D4C2DAE92358101700524075 /* NetworkTestViewController.h */,
@@ -273,7 +268,6 @@
 				D4C2DAE52358100D00524075 /* LoadModelViewController.m in Sources */,
 				D48F802D2302B89E0028135D /* AppDelegate.m in Sources */,
 				D4C2DAD823580FEE00524075 /* AdTypeViewController.m in Sources */,
-				D4C2DAEF2358101800524075 /* MediationTestViewController.m in Sources */,
 				D4C2DADE2358100300524075 /* HomeViewController.m in Sources */,
 				D4C2DAEE2358101800524075 /* RewardedVideoTestViewController.m in Sources */,
 			);

@@ -16,6 +16,9 @@ PODS:
   - AdLimeMediation_Chartboost (8.0.1.2):
     - AdLimeSdk
     - ChartboostSDK (~> 8.0.1)
+  - AdLimeMediation_Criteo (3.2.0.0):
+    - AdLimeSdk
+    - CriteoPublisherSdk (~> 3.2.0)
   - AdLimeMediation_Facebook (5.5.1.0):
     - AdLimeSdk
     - FBAudienceNetwork (~> 5.5.1)
@@ -23,6 +26,9 @@ PODS:
     - AdLimeSdk
     - Flurry-iOS-SDK/FlurryAds (~> 10.0.2)
     - Flurry-iOS-SDK/FlurrySDK (~> 10.0.2)
+  - AdLimeMediation_Fyber (7.4.1.0):
+    - AdLimeSdk
+    - Fyber_Marketplace_SDK (~> 7.4.1)
   - AdLimeMediation_GoogleAds (7.50.0.0):
     - AdLimeSdk
     - Google-Mobile-Ads-SDK (~> 7.50.0)
@@ -52,12 +58,26 @@ PODS:
   - AppLovinSDK (6.9.5)
   - Bytedance-UnionAD (2.4.6.7)
   - ChartboostSDK (8.0.1)
+  - CriteoPublisherSdk (3.2.0)
   - FBAudienceNetwork (5.5.1):
     - FBSDKCoreKit/Basics (>= 5.2.1)
   - FBSDKCoreKit/Basics (5.8.0)
   - Flurry-iOS-SDK/FlurryAds (10.0.2):
     - Flurry-iOS-SDK/FlurrySDK (~> 10.0.2)
   - Flurry-iOS-SDK/FlurrySDK (10.0.2)
+  - Fyber_Marketplace_SDK (7.4.1):
+    - Fyber_Marketplace_SDK/IASDKCore (= 7.4.1)
+    - Fyber_Marketplace_SDK/IASDKMRAID (= 7.4.1)
+    - Fyber_Marketplace_SDK/IASDKNative (= 7.4.1)
+    - Fyber_Marketplace_SDK/IASDKVideo (= 7.4.1)
+  - Fyber_Marketplace_SDK/IASDKCore (7.4.1)
+  - Fyber_Marketplace_SDK/IASDKMRAID (7.4.1):
+    - Fyber_Marketplace_SDK/IASDKCore
+  - Fyber_Marketplace_SDK/IASDKNative (7.4.1):
+    - Fyber_Marketplace_SDK/IASDKCore
+    - Fyber_Marketplace_SDK/IASDKVideo
+  - Fyber_Marketplace_SDK/IASDKVideo (7.4.1):
+    - Fyber_Marketplace_SDK/IASDKCore
   - Google-Mobile-Ads-SDK (7.50.0):
     - GoogleAppMeasurement (~> 6.0)
   - GoogleAppMeasurement (6.1.3):
@@ -111,8 +131,10 @@ DEPENDENCIES:
   - AdLimeMediation_Amazon
   - AdLimeMediation_AppLovin
   - AdLimeMediation_Chartboost
+  - AdLimeMediation_Criteo
   - AdLimeMediation_Facebook
   - AdLimeMediation_Flurry
+  - AdLimeMediation_Fyber
   - AdLimeMediation_GoogleAds
   - AdLimeMediation_IronSource
   - AdLimeMediation_Maio
@@ -133,8 +155,10 @@ SPEC REPOS:
     - AdLimeMediation_Amazon
     - AdLimeMediation_AppLovin
     - AdLimeMediation_Chartboost
+    - AdLimeMediation_Criteo
     - AdLimeMediation_Facebook
     - AdLimeMediation_Flurry
+    - AdLimeMediation_Fyber
     - AdLimeMediation_GoogleAds
     - AdLimeMediation_IronSource
     - AdLimeMediation_Maio
@@ -148,9 +172,11 @@ SPEC REPOS:
     - AppLovinSDK
     - Bytedance-UnionAD
     - ChartboostSDK
+    - CriteoPublisherSdk
     - FBAudienceNetwork
     - FBSDKCoreKit
     - Flurry-iOS-SDK
+    - Fyber_Marketplace_SDK
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -171,8 +197,10 @@ SPEC CHECKSUMS:
   AdLimeMediation_Amazon: 1d0dd03175a5085c0214d2494fa13c6f57ce94ae
   AdLimeMediation_AppLovin: 330289eb9673de0462ab236529372e6e3e7da201
   AdLimeMediation_Chartboost: e60440f43137e4588c52aab06bddc69ba584eae6
+  AdLimeMediation_Criteo: 8b6131f191dcd3bfab82dd813c0fb72b51e79209
   AdLimeMediation_Facebook: 576dc869d655248e2054b69f8d078f55ba7beac3
   AdLimeMediation_Flurry: e56b430be3f5331d03ccb54a64ea23956ff26e6e
+  AdLimeMediation_Fyber: 9e27e25e60040df78c7f20246e866f02d6b83076
   AdLimeMediation_GoogleAds: 4f2f9ea6546175d6bb19655e7bf68db9ab9dd532
   AdLimeMediation_IronSource: 0995024cd5f1c65bbe0aebff53728a083cf44108
   AdLimeMediation_Maio: e27eed6c1c063f4555da37228e8ba0db6585fad3
@@ -186,9 +214,11 @@ SPEC CHECKSUMS:
   AppLovinSDK: 15268696b789c0954520ca95022fe2453bc41291
   Bytedance-UnionAD: 794d75a1af5f3635e0c2ea9d6f74720b56dba43e
   ChartboostSDK: 28c7d73f75d34afbc2b9fdcf993382132cf0569a
+  CriteoPublisherSdk: 4697cb44768aa99aa0347d920826a1d24a9e044f
   FBAudienceNetwork: 783ff4808b0b59d0eb294dd94eb251f46e0ce5c9
   FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
   Flurry-iOS-SDK: 71da0ebf2088b15d8899da71050efc8b33bfd21f
+  Fyber_Marketplace_SDK: 53dd4482f7f21a2b2ddc8258fa9b5a0e2251bc4a
   Google-Mobile-Ads-SDK: d48dbaf5bae1ab7a94a9786f493c26c454bc6f16
   GoogleAppMeasurement: 434cc7be25e71dc04b8d0e3079125127b330e84a
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
@@ -201,6 +231,6 @@ SPEC CHECKSUMS:
   UnityAds: 0b7ecf8df83e8a3d62122a3fcf61e47c8e848f3c
   VungleSDK-iOS: 8951559521dd73c3f947757e9a4c4bbfd8645b7f
 
-PODFILE CHECKSUM: 6d70a22f34ef37c48639d72a33c8bba3795b5057
+PODFILE CHECKSUM: 76d6222ed6bc6e870ba71d882db0f565c530a367
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4
