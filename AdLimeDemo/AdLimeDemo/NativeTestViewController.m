@@ -90,7 +90,8 @@
     showNativeBtn.enabled = NO;
     self.showNativeBtn = showNativeBtn;
     
-     [self createNativeAd];
+     [self createNativeAd];    //创建自定义的nativeLayout
+    //[self createDefaultNativeAd]; //获取默认的NativeLayout
 }
 
 - (void) closePage {
@@ -141,6 +142,21 @@
     layout.iconView = icon;
     
     self.nativeLayout = layout;
+}
+
+- (void)createDefaultNativeAd {
+    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(10, kTopBarSafeHeight+80, ScreenWidth-20, 340)];
+
+    [adView setBackgroundColor:[UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]];
+    [self.view addSubview:adView];
+    adView.layer.borderColor = [UIColor colorWithRed:36.0/255.0 green:189.0/255.0 blue:155.0/255.0 alpha:1].CGColor;
+    adView.layer.cornerRadius = 10;
+    adView.layer.borderWidth = 2;
+    self.nativeAdView = adView;
+
+    adView.hidden = YES;
+    
+    self.nativeLayout = [AdLimeNativeAdLayout getLargeLayout1WithWidth:ScreenWidth-20];
 }
 
 - (void) loadNative {
