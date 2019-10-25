@@ -90,8 +90,8 @@
     showNativeBtn.enabled = NO;
     self.showNativeBtn = showNativeBtn;
     
-     [self createNativeAd];    //创建自定义的nativeLayout
-    //[self createDefaultNativeAd]; //获取默认的NativeLayout
+     [self createNativeAd];    // nativeLayout
+    //[self createDefaultNativeAd]; //get default NativeLayout
 }
 
 - (void) closePage {
