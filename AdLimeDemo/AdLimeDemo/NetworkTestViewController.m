@@ -2,7 +2,7 @@
 //  NetworkTestViewController.m
 //  TaurusAds_iOS_TestApp
 //
-//  Created by tang on 2019/7/10.
+//  Created by Hammer on 2019/7/10.
 //  Copyright © 2019 we. All rights reserved.
 //
 
@@ -48,12 +48,10 @@
     @"Vungle": @[@"8a9ecfba-6e7c-4ce2-bdda-18fdd0e518ea", @"", @"af65d340-1ae2-4f57-90cf-bf723bb78a34", @"", @"c6a9d2cd-aa6f-4125-9d5e-6ecbb04e6fbc"]
     };
     
-    //取出字典所有key
     NSArray *keyArray = [_netWorksDic allKeys];
         
-    //将key排序
    _sortedArray = [keyArray sortedArrayUsingComparator:^NSComparisonResult(id obj1,id obj2) {
-            return[obj1 compare:obj2 options:NSNumericSearch];//正序
+            return[obj1 compare:obj2 options:NSNumericSearch];
     }];
     
     UIView *header = [[UIView alloc] init];
