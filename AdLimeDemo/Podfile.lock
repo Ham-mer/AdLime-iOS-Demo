@@ -44,6 +44,9 @@ PODS:
   - AdLimeMediation_Nend (5.3.0.0):
     - AdLimeSdk
     - NendSDK_iOS (~> 5.3.0)
+  - AdLimeMediation_Tapjoy (12.3.4.0):
+    - AdLimeSdk
+    - TapjoySDK (~> 12.3.4)
   - AdLimeMediation_TikTok (2.4.6.3.1):
     - AdLimeSdk
     - Bytedance-UnionAD (~> 2.4.6.3)
@@ -122,6 +125,7 @@ PODS:
   - nanopb/decode (0.3.904)
   - nanopb/encode (0.3.904)
   - NendSDK_iOS (5.3.0)
+  - TapjoySDK (12.3.4)
   - UnityAds (3.3.0)
   - VungleSDK-iOS (6.4.5)
 
@@ -140,6 +144,7 @@ DEPENDENCIES:
   - AdLimeMediation_Maio
   - AdLimeMediation_MoPub
   - AdLimeMediation_Nend
+  - AdLimeMediation_Tapjoy
   - AdLimeMediation_TikTok
   - AdLimeMediation_UnityAds
   - AdLimeMediation_Vungle
@@ -164,6 +169,7 @@ SPEC REPOS:
     - AdLimeMediation_Maio
     - AdLimeMediation_MoPub
     - AdLimeMediation_Nend
+    - AdLimeMediation_Tapjoy
     - AdLimeMediation_TikTok
     - AdLimeMediation_UnityAds
     - AdLimeMediation_Vungle
@@ -186,6 +192,7 @@ SPEC REPOS:
     - mopub-ios-sdk
     - nanopb
     - NendSDK_iOS
+    - TapjoySDK
     - UnityAds
     - VungleSDK-iOS
 
@@ -206,6 +213,7 @@ SPEC CHECKSUMS:
   AdLimeMediation_Maio: e27eed6c1c063f4555da37228e8ba0db6585fad3
   AdLimeMediation_MoPub: 9bfae7368b451f79bc896752bf80c5e064abb392
   AdLimeMediation_Nend: ab30a2c9aecd3b1eb4e150a18132845d1bebfe32
+  AdLimeMediation_Tapjoy: 00a9b5fd7bb23bacb2c6e15d5054934ec0d15f51
   AdLimeMediation_TikTok: 5317aa8e87637c0f0285fea7d7a39e7b8ff6d21a
   AdLimeMediation_UnityAds: 8c96cfef96a9cf49cf15914c4b1f28e2416fdb36
   AdLimeMediation_Vungle: 6651d65f5a69a4a7911961f838f0929b67adea29
@@ -228,9 +236,10 @@ SPEC CHECKSUMS:
   mopub-ios-sdk: 7a5d264dc92c3e6c791bdcd476a2602f71acf331
   nanopb: 06f6030d554e6473f5e172460173fcf80f5548f4
   NendSDK_iOS: 42684cd12395127ea6cf113009ecb4714cc87fe3
+  TapjoySDK: 4325bc3c42ae91fed30929792a71d380c63a3c6c
   UnityAds: 0b7ecf8df83e8a3d62122a3fcf61e47c8e848f3c
   VungleSDK-iOS: 8951559521dd73c3f947757e9a4c4bbfd8645b7f
 
-PODFILE CHECKSUM: 76d6222ed6bc6e870ba71d882db0f565c530a367
+PODFILE CHECKSUM: e46996406e04d91861866f554faaff937b054f49
 
 COCOAPODS: 1.8.4

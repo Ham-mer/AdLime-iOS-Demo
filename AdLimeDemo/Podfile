@@ -25,6 +25,7 @@ target 'AdLimeDemo' do
     pod 'AdLimeMediation_Maio'
     pod 'AdLimeMediation_MoPub'
     pod 'AdLimeMediation_Nend'
+    pod 'AdLimeMediation_Tapjoy'
     pod 'AdLimeMediation_TikTok'
     pod 'AdLimeMediation_UnityAds'
     pod 'AdLimeMediation_Vungle'
