@@ -19,6 +19,8 @@ PODS:
   - AdLimeMediation_Criteo (3.2.0.0):
     - AdLimeSdk
     - CriteoPublisherSdk (~> 3.2.0)
+  - AdLimeMediation_DUADPlatform (1.1.4.0):
+    - AdLimeSdk
   - AdLimeMediation_Facebook (5.5.1.0):
     - AdLimeSdk
     - FBAudienceNetwork (~> 5.5.1)
@@ -136,6 +138,7 @@ DEPENDENCIES:
   - AdLimeMediation_AppLovin
   - AdLimeMediation_Chartboost
   - AdLimeMediation_Criteo
+  - AdLimeMediation_DUADPlatform
   - AdLimeMediation_Facebook
   - AdLimeMediation_Flurry
   - AdLimeMediation_Fyber
@@ -161,6 +164,7 @@ SPEC REPOS:
     - AdLimeMediation_AppLovin
     - AdLimeMediation_Chartboost
     - AdLimeMediation_Criteo
+    - AdLimeMediation_DUADPlatform
     - AdLimeMediation_Facebook
     - AdLimeMediation_Flurry
     - AdLimeMediation_Fyber
@@ -205,6 +209,7 @@ SPEC CHECKSUMS:
   AdLimeMediation_AppLovin: 330289eb9673de0462ab236529372e6e3e7da201
   AdLimeMediation_Chartboost: e60440f43137e4588c52aab06bddc69ba584eae6
   AdLimeMediation_Criteo: 8b6131f191dcd3bfab82dd813c0fb72b51e79209
+  AdLimeMediation_DUADPlatform: 99577f26739dca62207f7f1594b14782de67a77a
   AdLimeMediation_Facebook: 576dc869d655248e2054b69f8d078f55ba7beac3
   AdLimeMediation_Flurry: e56b430be3f5331d03ccb54a64ea23956ff26e6e
   AdLimeMediation_Fyber: 9e27e25e60040df78c7f20246e866f02d6b83076
@@ -240,6 +245,6 @@ SPEC CHECKSUMS:
   UnityAds: 0b7ecf8df83e8a3d62122a3fcf61e47c8e848f3c
   VungleSDK-iOS: 8951559521dd73c3f947757e9a4c4bbfd8645b7f
 
-PODFILE CHECKSUM: e46996406e04d91861866f554faaff937b054f49
+PODFILE CHECKSUM: c9b3c4a43e5089596dea12e467dfe8c9292ba610
 
 COCOAPODS: 1.8.4

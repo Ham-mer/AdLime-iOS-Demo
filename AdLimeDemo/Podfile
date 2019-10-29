@@ -17,6 +17,7 @@ target 'AdLimeDemo' do
     pod 'AdLimeMediation_AdColony'
     pod 'AdLimeMediation_AdGeneration'
     pod 'AdLimeMediation_Facebook'
+    pod 'AdLimeMediation_DUADPlatform'
     pod 'AdLimeMediation_Chartboost'
     pod 'AdLimeMediation_Criteo'
     pod 'AdLimeMediation_Flurry'
