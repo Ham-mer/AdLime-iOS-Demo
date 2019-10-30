@@ -4,6 +4,7 @@ project 'AdLimeDemo.xcodeproj'
 platform :ios, '10.0'
 
 inhibit_all_warnings!
+install!'cocoapods',:deterministic_uuids=>false
 
 target 'AdLimeDemo' do
 
@@ -17,6 +18,7 @@ target 'AdLimeDemo' do
     pod 'AdLimeMediation_AdColony'
     pod 'AdLimeMediation_AdGeneration'
     pod 'AdLimeMediation_Facebook'
+    pod 'AdLimeMediation_Five'
     pod 'AdLimeMediation_DUADPlatform'
     pod 'AdLimeMediation_Chartboost'
     pod 'AdLimeMediation_Criteo'
