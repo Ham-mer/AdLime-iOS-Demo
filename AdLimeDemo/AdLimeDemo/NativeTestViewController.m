@@ -10,6 +10,7 @@
 @import AdLimeSdk;
 #import "Masonry.h"
 #import "macro.h"
+#import <AdLimeMediation_Vungle/AdLimeMediation_Vungle.h>
 
 @interface NativeTestViewController () <AdLimeNativeAdDelegate>
 
@@ -160,9 +161,17 @@
 }
 
 - (void) loadNative {
+    AdLimeNetworkConfigs *configs = [[AdLimeNetworkConfigs alloc] init];
+    
+    AdLimeVungleInFeedConfig *config = [[AdLimeVungleInFeedConfig alloc] init];
+    [config setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 500)];
+    [configs addConfig:config];
+    
+    
     self.nativeAd = [[AdLimeNativeAd alloc] initWithAdUnitId:self.adUnitID];
     self.nativeAd.delegate = self;
     [self.nativeAd setNativeAdLayout:self.nativeLayout];
+    [self.nativeAd setNetworkConfigs:configs];
     
     [self.nativeAd loadAd];
     

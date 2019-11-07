@@ -48,7 +48,7 @@
     @"Tapjoy":@[@"", @"", @"dacdf765-61e7-4f3b-b21c-c1ec0d81fef2", @"", @"bf9e8efe-eda0-4ec4-9f7f-8543062d9d7e"],
     @"Tiktok":@[@"c1b67204-f1af-437e-a53f-4ce342c32a48", @"f7682d60-84b7-44a6-86f0-da73ece47427", @"66123f13-5a77-4cee-ab21-3bfd27d8b84d", @"b3162881-30e7-4526-99f3-956f45167eb3", @"1f1a5107-b710-4969-bb8a-f306a7fcf2b4"],
     @"Unity Ads": @[@"60769db1-6d78-4d92-9875-44cea0d75bdc", @"", @"c3c312ba-992e-49e2-9d56-f5cab030e550", @"", @"f6122590-1b63-4255-b2f6-537282877009"],
-    @"Vungle": @[@"8a9ecfba-6e7c-4ce2-bdda-18fdd0e518ea", @"", @"af65d340-1ae2-4f57-90cf-bf723bb78a34", @"", @"c6a9d2cd-aa6f-4125-9d5e-6ecbb04e6fbc"]
+    @"Vungle": @[@"", @"8a9ecfba-6e7c-4ce2-bdda-18fdd0e518ea", @"af65d340-1ae2-4f57-90cf-bf723bb78a34", @"5b8ab434-b499-4ba0-bb36-4706b281fe09", @"c6a9d2cd-aa6f-4125-9d5e-6ecbb04e6fbc"]
     };
     
     NSArray *keyArray = [_netWorksDic allKeys];
