@@ -1,0 +1,6 @@
+framework module AdLimeMediation_DisplayIO {
+  umbrella header "AdLimeMediation_DisplayIO.h"
+
+  export *
+  module * { export * }
+}

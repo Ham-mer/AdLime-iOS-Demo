@@ -11,6 +11,9 @@
 		D48F80352302B89F0028135D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48F80342302B89F0028135D /* Assets.xcassets */; };
 		D48F80382302B89F0028135D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F80362302B89F0028135D /* LaunchScreen.storyboard */; };
 		D48F803B2302B89F0028135D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F803A2302B89F0028135D /* main.m */; };
+		D4A9DA43238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9DA42238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework */; };
+		D4A9DA46238E4A9A0022E6CB /* DIOSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9DA44238E49880022E6CB /* DIOSDK.framework */; };
+		D4A9DA47238E4A9A0022E6CB /* DIOSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9DA44238E49880022E6CB /* DIOSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4C2DAD823580FEE00524075 /* AdTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAD723580FEE00524075 /* AdTypeViewController.m */; };
 		D4C2DADB23580FF800524075 /* BannerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAD923580FF700524075 /* BannerTestViewController.m */; };
 		D4C2DADE2358100300524075 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DADD2358100300524075 /* HomeViewController.m */; };
@@ -21,6 +24,20 @@
 		D4C2DAF12358101800524075 /* NetworkTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAED2358101700524075 /* NetworkTestViewController.m */; };
 		EE8B0990B91AF3B9F45ACAA3 /* Pods_AdLimeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4A9DA48238E4A9A0022E6CB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4A9DA47238E4A9A0022E6CB /* DIOSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		57075ED4FEBC187AD1F939EC /* Pods-AdLimeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLimeDemo.debug.xcconfig"; path = "Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,6 +50,8 @@
 		D48F80372302B89F0028135D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48F80392302B89F0028135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D48F803A2302B89F0028135D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4A9DA42238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdLimeMediation_DisplayIO.framework; sourceTree = "<group>"; };
+		D4A9DA44238E49880022E6CB /* DIOSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIOSDK.framework; sourceTree = "<group>"; };
 		D4C2DAD623580FEE00524075 /* AdTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTypeViewController.h; sourceTree = "<group>"; };
 		D4C2DAD723580FEE00524075 /* AdTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTypeViewController.m; sourceTree = "<group>"; };
 		D4C2DAD923580FF700524075 /* BannerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerTestViewController.m; sourceTree = "<group>"; };
@@ -57,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A9DA46238E4A9A0022E6CB /* DIOSDK.framework in Frameworks */,
+				D4A9DA43238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework in Frameworks */,
 				EE8B0990B91AF3B9F45ACAA3 /* Pods_AdLimeDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +123,8 @@
 		D48F802A2302B89E0028135D /* AdLimeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D4A9DA44238E49880022E6CB /* DIOSDK.framework */,
+				D4A9DA42238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework */,
 				D4C2DAD623580FEE00524075 /* AdTypeViewController.h */,
 				D4C2DAD723580FEE00524075 /* AdTypeViewController.m */,
 				D4C2DADA23580FF800524075 /* BannerTestViewController.h */,
@@ -142,6 +165,7 @@
 				D48F80262302B89E0028135D /* Resources */,
 				0F437984FBC61B4CCC0522FF /* [CP] Embed Pods Frameworks */,
 				19D2180CC1C9CC703E7AE0B6 /* [CP] Copy Pods Resources */,
+				D4A9DA48238E4A9A0022E6CB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,6 +433,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdLimeDemo/framework",
+					"$(PROJECT_DIR)/AdLimeDemo",
 				);
 				INFOPLIST_FILE = AdLimeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -436,6 +461,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdLimeDemo/framework",
+					"$(PROJECT_DIR)/AdLimeDemo",
 				);
 				INFOPLIST_FILE = AdLimeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

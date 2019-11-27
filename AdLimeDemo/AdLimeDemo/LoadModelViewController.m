@@ -106,7 +106,7 @@
         }
             break;
         case 1: {
-            NSArray *ads = @[@[@"Banner", @"1b046ba2-cd3f-48b9-87a0-f8420265bccf"], @[@"Interstitial", @"57be18f5-7030-4a46-8fc9-49b4abbd2438"], @[@"Native", @"9fecf3e0-5948-41ce-80ea-2be49bf83319"], @[@"RewardedVideo", @"57671db6-9108-418b-8e4a-b7ff1851e721"]];
+            NSArray *ads = @[@[@"Banner", @"1b046ba2-cd3f-48b9-87a0-f8420265bccf"], @[@"Interstitial", @"a86517a3-a6dd-49e0-bd13-4de18c2c2890"], @[@"Native", @"9fecf3e0-5948-41ce-80ea-2be49bf83319"], @[@"RewardedVideo", @"57671db6-9108-418b-8e4a-b7ff1851e721"]];
             vc.adsDic = ads;
             vc.titleStr = @"Parallel Test";
         }

@@ -118,6 +118,15 @@
         if (self.bannerSize == ADLIME_BANNER_SIZE_300_250) {
             make.width.equalTo(@(300));
             make.height.equalTo(@(250));
+        } else if (self.bannerSize == ADLIME_BANNER_SIZE_320_100){
+            make.width.equalTo(@(320));
+            make.height.equalTo(@(100));
+        } else if (self.bannerSize == ADLIME_BANNER_SIZE_468_60){
+            make.width.equalTo(@(468));
+            make.height.equalTo(@(60));
+        } else if (self.bannerSize == ADLIME_BANNER_SIZE_728_90){
+            make.width.equalTo(@(728));
+            make.height.equalTo(@(90));
         } else {
             make.width.equalTo(@(320));
             make.height.equalTo(@(50));
