@@ -9,7 +9,8 @@
 #import "RewardedVideoTestViewController.h"
 @import AdLimeSdk;
 #import "Masonry.h"
-#import "macro.h"
+#import "util/macro.h"
+#import "util/UIView+Toast.h"
 
 @interface RewardedVideoTestViewController () <AdLimeRewardedVideoAdDelegate>
 
@@ -65,7 +66,6 @@
     }];
     
     UIButton *loadRewardBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    loadRewardBtn.frame = CGRectMake(20, kTopBarSafeHeight+50, 150, 30);
     [self.view addSubview:loadRewardBtn];
     [loadRewardBtn setTitle:@"load Reward" forState:UIControlStateNormal];
     //[loadRewardBtn setBackgroundColor:[UIColor blueColor]];
@@ -74,9 +74,7 @@
     [loadRewardBtn setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateDisabled];
     [loadRewardBtn addTarget:self action:@selector(loadReward) forControlEvents:UIControlEventTouchUpInside];
     
-    CGFloat left = ScreenWidth - 150 - 20;
     UIButton *rewardShowBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    rewardShowBtn.frame = CGRectMake(left, kTopBarSafeHeight+50, 150, 30);
     [self.view addSubview:rewardShowBtn];
     [rewardShowBtn setTitle:@"show Reward" forState:UIControlStateNormal];
     //[rewardShowBtn setBackgroundColor:[UIColor blueColor]];
@@ -86,6 +84,21 @@
     [rewardShowBtn addTarget:self action:@selector(showReward) forControlEvents:UIControlEventTouchUpInside];
     self.showRewardBtn = rewardShowBtn;
     self.showRewardBtn.enabled = NO;
+    
+    [loadRewardBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(30);
+        make.top.equalTo(header.mas_bottom).offset(10);
+        make.width.equalTo(@(150));
+        make.height.equalTo(@(20));
+    }];
+    
+    [rewardShowBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view).offset(-30);
+        make.top.equalTo(header.mas_bottom).offset(10);
+        make.width.equalTo(@(150));
+        make.height.equalTo(@(20));
+    }];
+    
 }
 
 - (void) closePage {
@@ -113,6 +126,7 @@
 
 - (void)adLimeRewardedVideo:(AdLimeRewardedVideoAd *)rewardedVideoAd didFailToReceiveAdWithError:(AdLimeAdError *)adError {
     NSLog(@"adLimeRewardedVideo didFailToReceiveAdWithError %d",(int)[adError getCode]);
+     [self.view makeToast:@"load failed" duration:3.0 position:CSToastPositionCenter];
 }
 
 - (void)adLimeRewardedVideoDidStart:(AdLimeRewardedVideoAd *)rewardedVideoAd {

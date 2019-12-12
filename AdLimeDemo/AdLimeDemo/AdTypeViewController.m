@@ -12,7 +12,9 @@
 #import "InterstitialTestViewController.h"
 #import "NativeTestViewController.h"
 #import "RewardedVideoTestViewController.h"
-#import "macro.h"
+#import "MixViewTestViewController.h"
+#import "MixFullScreenTestViewController.h"
+#import "util/macro.h"
 
 @interface AdTypeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -142,6 +144,18 @@
         [self presentViewController:adsTestVc animated:YES completion:nil];
     } else if ([_adsDic[indexPath.row][0] isEqualToString:@"RewardedVideo"]) {
         RewardedVideoTestViewController *adsTestVc = [[RewardedVideoTestViewController alloc] init];
+        adsTestVc.titleStr = self.titleStr;
+        adsTestVc.modalPresentationStyle = UIModalPresentationFullScreen;
+        adsTestVc.adUnitID = _adsDic[indexPath.row][1];
+        [self presentViewController:adsTestVc animated:YES completion:nil];
+    } else if ([_adsDic[indexPath.row][0] isEqualToString:@"MixView"]) {
+        MixViewTestViewController *adsTestVc = [[MixViewTestViewController alloc] init];
+        adsTestVc.titleStr = self.titleStr;
+        adsTestVc.modalPresentationStyle = UIModalPresentationFullScreen;
+        adsTestVc.adUnitID = _adsDic[indexPath.row][1];
+        [self presentViewController:adsTestVc animated:YES completion:nil];
+    } else if ([_adsDic[indexPath.row][0] isEqualToString:@"MixFullScreen"]) {
+        MixFullScreenTestViewController *adsTestVc = [[MixFullScreenTestViewController alloc] init];
         adsTestVc.titleStr = self.titleStr;
         adsTestVc.modalPresentationStyle = UIModalPresentationFullScreen;
         adsTestVc.adUnitID = _adsDic[indexPath.row][1];

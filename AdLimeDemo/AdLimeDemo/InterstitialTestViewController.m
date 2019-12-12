@@ -9,7 +9,8 @@
 #import "InterstitialTestViewController.h"
 @import AdLimeSdk;
 #import "Masonry.h"
-#import "macro.h"
+#import "util/macro.h"
+#import "util/UIView+Toast.h"
 
 @interface InterstitialTestViewController () <AdLimeInterstitialAdDelegate>
 
@@ -65,7 +66,6 @@
     }];
     
     UIButton *testloadIntBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    testloadIntBtn.frame = CGRectMake(20, kTopBarSafeHeight+50, 150, 30);
     [self.view addSubview:testloadIntBtn];
     [testloadIntBtn setTitle:@"load Intersitial" forState:UIControlStateNormal];
     //[testloadIntBtn setBackgroundColor:[UIColor blueColor]];
@@ -74,9 +74,7 @@
     [testloadIntBtn setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateDisabled];
     [testloadIntBtn addTarget:self action:@selector(loadInteristial) forControlEvents:UIControlEventTouchUpInside];
     
-    CGFloat left = ScreenWidth - 150 - 20;
     UIButton *testshowIntBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    testshowIntBtn.frame = CGRectMake(left, kTopBarSafeHeight+50, 150, 30);
     [self.view addSubview:testshowIntBtn];
     [testshowIntBtn setTitle:@"show Intersitial" forState:UIControlStateNormal];
     //[testshowIntBtn setBackgroundColor:[UIColor blueColor]];
@@ -86,6 +84,21 @@
     [testshowIntBtn addTarget:self action:@selector(showInterstitial) forControlEvents:UIControlEventTouchUpInside];
     testshowIntBtn.enabled = NO;
     self.showIntBtn = testshowIntBtn;
+    
+    [testloadIntBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(30);
+        make.top.equalTo(header.mas_bottom).offset(10);
+        make.width.equalTo(@(150));
+        make.height.equalTo(@(20));
+    }];
+    
+    [testshowIntBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view).offset(-30);
+        make.top.equalTo(header.mas_bottom).offset(10);
+        make.width.equalTo(@(150));
+        make.height.equalTo(@(20));
+    }];
+    
 }
 
 - (void) closePage {
@@ -115,6 +128,7 @@
 
 - (void)adLimeInterstitial:(AdLimeInterstitialAd *)interstitialAd didFailToReceiveAdWithError:(AdLimeAdError *)adError{
     NSLog(@"AdLimeInterstitialAd didFailToReceiveAdWithError %d", (int)[adError getCode]);
+     [self.view makeToast:@"load failed" duration:3.0 position:CSToastPositionCenter];
 }
 
 - (void)adLimeInterstitialWillPresentScreen:(AdLimeInterstitialAd *)interstitialAd {

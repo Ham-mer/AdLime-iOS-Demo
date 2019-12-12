@@ -9,8 +9,9 @@
 #import "NativeTestViewController.h"
 @import AdLimeSdk;
 #import "Masonry.h"
-#import "macro.h"
+#import "util/macro.h"
 #import <AdLimeMediation_Vungle/AdLimeMediation_Vungle.h>
+#import "util/UIView+Toast.h"
 
 @interface NativeTestViewController () <AdLimeNativeAdDelegate>
 
@@ -69,7 +70,6 @@
     }];
     
     UIButton *loadNativeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    loadNativeBtn.frame = CGRectMake(20, kTopBarSafeHeight+50, 150, 30);
     [self.view addSubview:loadNativeBtn];
     [loadNativeBtn setTitle:@"load Native" forState:UIControlStateNormal];
     //[loadNativeBtn setBackgroundColor:[UIColor blueColor]];
@@ -78,18 +78,14 @@
     [loadNativeBtn setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateDisabled];
     [loadNativeBtn addTarget:self action:@selector(loadNative) forControlEvents:UIControlEventTouchUpInside];
     
-    CGFloat left = ScreenWidth - 150 - 20;
-    UIButton *showNativeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    showNativeBtn.frame = CGRectMake(left, kTopBarSafeHeight+50, 150, 30);
-    [self.view addSubview:showNativeBtn];
-    [showNativeBtn setTitle:@"show Native" forState:UIControlStateNormal];
-    //[showNativeBtn setBackgroundColor:[UIColor blueColor]];
-    [showNativeBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0]  forState:UIControlStateNormal];
-    [showNativeBtn setTitleColor:[UIColor colorWithRed:135.0/255.0 green:216.0/255.0 blue:80.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];
-    [showNativeBtn setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateDisabled];
-    [showNativeBtn addTarget:self action:@selector(showNative) forControlEvents:UIControlEventTouchUpInside];
-    showNativeBtn.enabled = NO;
-    self.showNativeBtn = showNativeBtn;
+    [loadNativeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(header.mas_bottom).offset(10);
+        make.width.equalTo(@(200));
+        make.height.equalTo(@(20));
+    }];
+    
+    self.showNativeBtn = loadNativeBtn;
     
      [self createNativeAd];    // nativeLayout
     //[self createDefaultNativeAd]; //get default NativeLayout
@@ -100,7 +96,7 @@
 }
 
 - (void)createNativeAd {
-    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(10, kTopBarSafeHeight+80, ScreenWidth-20, 250)];
+    UIView *adView = [[UIView alloc] init];
     
     [adView setBackgroundColor:[UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]];
     [self.view addSubview:adView];
@@ -108,6 +104,13 @@
     adView.layer.cornerRadius = 10;
     adView.layer.borderWidth = 2;
     self.nativeAdView = adView;
+    
+    [adView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.showNativeBtn.mas_bottom).offset(10);
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(@(250));
+    }];
     
     adView.hidden = YES;
     
@@ -146,7 +149,7 @@
 }
 
 - (void)createDefaultNativeAd {
-    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(10, kTopBarSafeHeight+80, ScreenWidth-20, 340)];
+    UIView *adView = [[UIView alloc] init];
 
     [adView setBackgroundColor:[UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]];
     [self.view addSubview:adView];
@@ -154,6 +157,13 @@
     adView.layer.cornerRadius = 10;
     adView.layer.borderWidth = 2;
     self.nativeAdView = adView;
+    
+    [adView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.showNativeBtn.mas_bottom).offset(10);
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(@(340));
+    }];
 
     adView.hidden = YES;
     
@@ -181,6 +191,9 @@
     if (self.nativeAd.isReady) {
         UIView *adView = [self.nativeAd getAdView];
         [self.nativeAdView addSubview:adView];
+        
+        adView.center = CGPointMake(self.nativeAdView.bounds.size.width/2, self.nativeAdView.bounds.size.height/2);
+        
         self.nativeAdView.hidden = NO;
     }
 }
@@ -195,6 +208,7 @@
 
 - (void)adLimeNativeAd:(AdLimeNativeAd *)nativeAd didFailToReceiveAdWithError:(AdLimeAdError *)adError{
     NSLog(@"AdLimeNativeAd didFailToReceiveAdWithError %d", (int)[adError getCode]);
+     [self.view makeToast:@"load failed" duration:3.0 position:CSToastPositionCenter];
 }
 
 

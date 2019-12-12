@@ -9,7 +9,8 @@
 #import "BannerTestViewController.h"
 @import AdLimeSdk;
 #import "Masonry.h"
-#import "macro.h"
+#import "util/macro.h"
+#import "util/UIView+Toast.h"
 
 @interface BannerTestViewController () <AdLimeBannerViewDelegate>
 
@@ -65,13 +66,19 @@
     }];
     
     UIButton *testBannerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    testBannerBtn.frame = CGRectMake((ScreenWidth-200)/2, kTopBarSafeHeight+50, 200, 30);
     [self.view addSubview:testBannerBtn];
     [testBannerBtn setTitle:@"load banner" forState:UIControlStateNormal];
     [testBannerBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     [testBannerBtn setTitleColor:[UIColor colorWithRed:135.0/255.0 green:216.0/255.0 blue:80.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];
     [testBannerBtn setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateDisabled];
-    [testBannerBtn addTarget:self action:@selector(testBanner) forControlEvents:UIControlEventTouchUpInside];
+    [testBannerBtn addTarget:self action:@selector(loadBanner) forControlEvents:UIControlEventTouchUpInside];
+    
+    [testBannerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(header.mas_bottom).offset(10);
+        make.width.equalTo(@(200));
+        make.height.equalTo(@(20));
+    }];
     
     UIView *banner = [[UIView alloc] init];
     [banner setBackgroundColor:[UIColor clearColor]];
@@ -89,6 +96,8 @@
     
     self.banner = banner;
     banner.hidden = YES;
+    
+    [self creativeBanner];
 }
 
 - (void) closePage {
@@ -96,13 +105,15 @@
 }
 
 
-- (void)testBanner {
-    AdLimeBannerView *bannerView = [[AdLimeBannerView alloc] initWithAdUnitId:self.adUnitID rootViewController:self];
-    bannerView.delegate = self;
+- (void)creativeBanner {
+    self.bannerAd = [[AdLimeBannerView alloc] initWithAdUnitId:self.adUnitID rootViewController:self];
+    self.bannerAd.delegate = self;
     
-    [self.banner addSubview:bannerView];
-    
-    [bannerView loadAd];
+    [self.banner addSubview:self.bannerAd];
+}
+
+- (void)loadBanner {
+    [self.bannerAd loadAd];
 }
 
 #pragma mark AdLimeBannerViewDelegate
@@ -110,32 +121,14 @@
     NSLog(@"AdLimeBannerView adLimeBannerDidReceiveAd, bannerView.adUnitId is %@", bannerView.adUnitId);
     self.banner.hidden = NO;
     
-    self.bannerAd = bannerView;
+//    self.bannerAd = bannerView;
 //    CGFloat x = (ScreenWidth-320)/2;
-//    bannerView.frame = CGRectMake(x, 10, 320, 50);
-    [bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.banner);
-        if (self.bannerSize == ADLIME_BANNER_SIZE_300_250) {
-            make.width.equalTo(@(300));
-            make.height.equalTo(@(250));
-        } else if (self.bannerSize == ADLIME_BANNER_SIZE_320_100){
-            make.width.equalTo(@(320));
-            make.height.equalTo(@(100));
-        } else if (self.bannerSize == ADLIME_BANNER_SIZE_468_60){
-            make.width.equalTo(@(468));
-            make.height.equalTo(@(60));
-        } else if (self.bannerSize == ADLIME_BANNER_SIZE_728_90){
-            make.width.equalTo(@(728));
-            make.height.equalTo(@(90));
-        } else {
-            make.width.equalTo(@(320));
-            make.height.equalTo(@(50));
-        }
-    }];
+    bannerView.frame = CGRectMake((ScreenWidth-bannerView.frame.size.width)/2, 0, bannerView.frame.size.width, bannerView.frame.size.height);
 }
 
 - (void)adLimeBanner:(AdLimeBannerView *)bannerView didFailToReceiveAdWithError:(AdLimeAdError *)adError {
     NSLog(@"AdLimeBannerView didFailToReceiveAdWithError %d, adunitID: %@" , (int)[adError getCode], bannerView.adUnitId);
+    [self.view makeToast:@"load failed" duration:3.0 position:CSToastPositionCenter];
 }
 
 - (void)adLimeBannerWillPresentScreen:(AdLimeBannerView *)bannerView {

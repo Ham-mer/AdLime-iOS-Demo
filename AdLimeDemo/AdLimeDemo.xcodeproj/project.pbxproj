@@ -12,8 +12,6 @@
 		D48F80382302B89F0028135D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F80362302B89F0028135D /* LaunchScreen.storyboard */; };
 		D48F803B2302B89F0028135D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F803A2302B89F0028135D /* main.m */; };
 		D4A9DA43238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9DA42238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework */; };
-		D4A9DA46238E4A9A0022E6CB /* DIOSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9DA44238E49880022E6CB /* DIOSDK.framework */; };
-		D4A9DA47238E4A9A0022E6CB /* DIOSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9DA44238E49880022E6CB /* DIOSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4C2DAD823580FEE00524075 /* AdTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAD723580FEE00524075 /* AdTypeViewController.m */; };
 		D4C2DADB23580FF800524075 /* BannerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAD923580FF700524075 /* BannerTestViewController.m */; };
 		D4C2DADE2358100300524075 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DADD2358100300524075 /* HomeViewController.m */; };
@@ -22,6 +20,9 @@
 		D4C2DAEE2358101800524075 /* RewardedVideoTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAEA2358101700524075 /* RewardedVideoTestViewController.m */; };
 		D4C2DAF02358101800524075 /* NativeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAEC2358101700524075 /* NativeTestViewController.m */; };
 		D4C2DAF12358101800524075 /* NetworkTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DAED2358101700524075 /* NetworkTestViewController.m */; };
+		D4CCC5B42396726B007089AE /* MixViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CCC5B02396726B007089AE /* MixViewTestViewController.m */; };
+		D4CCC5B52396726B007089AE /* MixFullScreenTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CCC5B32396726B007089AE /* MixFullScreenTestViewController.m */; };
+		D4CCC5B823967323007089AE /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CCC5B723967323007089AE /* UIView+Toast.m */; };
 		EE8B0990B91AF3B9F45ACAA3 /* Pods_AdLimeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D4A9DA47238E4A9A0022E6CB /* DIOSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +51,6 @@
 		D48F80392302B89F0028135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D48F803A2302B89F0028135D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4A9DA42238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdLimeMediation_DisplayIO.framework; sourceTree = "<group>"; };
-		D4A9DA44238E49880022E6CB /* DIOSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIOSDK.framework; sourceTree = "<group>"; };
 		D4C2DAD623580FEE00524075 /* AdTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTypeViewController.h; sourceTree = "<group>"; };
 		D4C2DAD723580FEE00524075 /* AdTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTypeViewController.m; sourceTree = "<group>"; };
 		D4C2DAD923580FF700524075 /* BannerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerTestViewController.m; sourceTree = "<group>"; };
@@ -69,6 +68,12 @@
 		D4C2DAEA2358101700524075 /* RewardedVideoTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoTestViewController.m; sourceTree = "<group>"; };
 		D4C2DAEC2358101700524075 /* NativeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeTestViewController.m; sourceTree = "<group>"; };
 		D4C2DAED2358101700524075 /* NetworkTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTestViewController.m; sourceTree = "<group>"; };
+		D4CCC5B02396726B007089AE /* MixViewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixViewTestViewController.m; sourceTree = "<group>"; };
+		D4CCC5B12396726B007089AE /* MixFullScreenTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixFullScreenTestViewController.h; sourceTree = "<group>"; };
+		D4CCC5B22396726B007089AE /* MixViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixViewTestViewController.h; sourceTree = "<group>"; };
+		D4CCC5B32396726B007089AE /* MixFullScreenTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixFullScreenTestViewController.m; sourceTree = "<group>"; };
+		D4CCC5B623967322007089AE /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		D4CCC5B723967323007089AE /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4A9DA46238E4A9A0022E6CB /* DIOSDK.framework in Frameworks */,
 				D4A9DA43238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework in Frameworks */,
 				EE8B0990B91AF3B9F45ACAA3 /* Pods_AdLimeDemo.framework in Frameworks */,
 			);
@@ -123,7 +127,7 @@
 		D48F802A2302B89E0028135D /* AdLimeDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D4A9DA44238E49880022E6CB /* DIOSDK.framework */,
+				D4CCC5B92396732E007089AE /* util */,
 				D4A9DA42238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework */,
 				D4C2DAD623580FEE00524075 /* AdTypeViewController.h */,
 				D4C2DAD723580FEE00524075 /* AdTypeViewController.m */,
@@ -141,7 +145,10 @@
 				D4C2DAED2358101700524075 /* NetworkTestViewController.m */,
 				D4C2DAE72358101700524075 /* RewardedVideoTestViewController.h */,
 				D4C2DAEA2358101700524075 /* RewardedVideoTestViewController.m */,
-				D4C2DADF2358100C00524075 /* macro.h */,
+				D4CCC5B12396726B007089AE /* MixFullScreenTestViewController.h */,
+				D4CCC5B32396726B007089AE /* MixFullScreenTestViewController.m */,
+				D4CCC5B22396726B007089AE /* MixViewTestViewController.h */,
+				D4CCC5B02396726B007089AE /* MixViewTestViewController.m */,
 				D48F802B2302B89E0028135D /* AppDelegate.h */,
 				D48F802C2302B89E0028135D /* AppDelegate.m */,
 				D48F80342302B89F0028135D /* Assets.xcassets */,
@@ -150,6 +157,16 @@
 				D48F803A2302B89F0028135D /* main.m */,
 			);
 			path = AdLimeDemo;
+			sourceTree = "<group>";
+		};
+		D4CCC5B92396732E007089AE /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D4C2DADF2358100C00524075 /* macro.h */,
+				D4CCC5B623967322007089AE /* UIView+Toast.h */,
+				D4CCC5B723967323007089AE /* UIView+Toast.m */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CCC5B52396726B007089AE /* MixFullScreenTestViewController.m in Sources */,
 				D4C2DAF02358101800524075 /* NativeTestViewController.m in Sources */,
 				D4C2DAE42358100D00524075 /* InterstitialTestViewController.m in Sources */,
 				D4C2DAF12358101800524075 /* NetworkTestViewController.m in Sources */,
@@ -291,7 +309,9 @@
 				D4C2DADB23580FF800524075 /* BannerTestViewController.m in Sources */,
 				D4C2DAE52358100D00524075 /* LoadModelViewController.m in Sources */,
 				D48F802D2302B89E0028135D /* AppDelegate.m in Sources */,
+				D4CCC5B823967323007089AE /* UIView+Toast.m in Sources */,
 				D4C2DAD823580FEE00524075 /* AdTypeViewController.m in Sources */,
+				D4CCC5B42396726B007089AE /* MixViewTestViewController.m in Sources */,
 				D4C2DADE2358100300524075 /* HomeViewController.m in Sources */,
 				D4C2DAEE2358101800524075 /* RewardedVideoTestViewController.m in Sources */,
 			);
