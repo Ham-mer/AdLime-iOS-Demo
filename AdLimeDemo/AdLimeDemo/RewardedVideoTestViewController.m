@@ -135,6 +135,7 @@
 
 - (void)adLimeRewardedVideoDidClose:(AdLimeRewardedVideoAd *)rewardedVideoAd{
     NSLog(@"adLimeRewardedVideo adLimeRewardedVideoDidComplete, rewardedVideoAd adUnitId is %@", rewardedVideoAd.adUnitId);
+    self.showRewardBtn.enabled = NO;
 }
 
 - (void)adLimeRewardedVideo:(AdLimeRewardedVideoAd *)rewardedVideoAd didReward:(AdLimeRewardItem *)item {

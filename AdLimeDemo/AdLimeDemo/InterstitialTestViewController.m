@@ -137,6 +137,7 @@
 
 - (void)adLimeInterstitialDidDismissScreen:(AdLimeInterstitialAd *)interstitialAd {
     NSLog(@"AdLimeInterstitialAd adLimeInterstitialDidDismissScreen, interstitialAd adUnitId is %@", interstitialAd.adUnitId);
+    self.showIntBtn.enabled = NO;
 }
 
 - (void)adLimeInterstitialWillLeaveApplication:(AdLimeInterstitialAd *)interstitialAd {
