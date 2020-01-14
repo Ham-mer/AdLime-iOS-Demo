@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) AdLimeNativeAdLayout *nativeLayout;
 
-@property (nonatomic, strong) UIView *testView;
+@property (nonatomic, strong) UIView *adView;
 
 @end
 
@@ -74,6 +74,24 @@
         make.width.equalTo(@(200));
         make.height.equalTo(@(20));
     }];
+    
+    UIView *adView = [[UIView alloc] init];
+
+    [adView setBackgroundColor:[UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]];
+    [self.view addSubview:adView];
+    adView.layer.borderColor = [UIColor colorWithRed:36.0/255.0 green:189.0/255.0 blue:155.0/255.0 alpha:1].CGColor;
+    adView.layer.cornerRadius = 10;
+    adView.layer.borderWidth = 2;
+    self.adView = adView;
+    
+    [adView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(loadNativeBtn.mas_bottom).offset(20);
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(@(340));
+    }];
+
+    adView.hidden = YES;
         
      //[self createLayout];
     [self createDefaultLayout];
@@ -123,35 +141,44 @@
 }
 
 - (void) loadMixView {
-    if (self.mixViewAd == nil) {
-        self.mixViewAd = [[AdLimeMixViewAd alloc] initWithAdUnitId:self.adUnitID rootViewController:self];
-        self.mixViewAd.delegate = self;
-        //[self.mixViewAd setCount:3];
-        [self.mixViewAd setNativeAdLayout:self.nativeLayout];
+    if (!useAdLoader) {
+        if (self.mixViewAd == nil) {
+            self.mixViewAd = [[AdLimeMixViewAd alloc] initWithAdUnitId:self.adUnitID rootViewController:self];
+            self.mixViewAd.delegate = self;
+            //[self.mixViewAd setCount:3];
+            [self.mixViewAd setNativeAdLayout:self.nativeLayout];
+        }
+        [self.mixViewAd loadAd];
+    } else {
+       [AdLimeAdLoader loadMixViewAd:self.adUnitID rootViewController:self withLayout:self.nativeLayout andDelegate:self];
     }
-    [self.mixViewAd loadAd];
-    
 }
 
 - (void)showMixView {
-
-    // 布置展示广告素材的 UIViews，可以通过新建 xib 文件或自定义 UIView 的子类
-    UIView *adView = [self.mixViewAd getAdView];
-    adView.frame = CGRectMake((ScreenWidth-adView.frame.size.width)/2, kTopBarSafeHeight+80, adView.frame.size.width, adView.frame.size.height);
-    // 展示广告
-    [adView setBackgroundColor:[UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]];
-    [self.view addSubview:adView];
-    adView.layer.borderColor = [UIColor colorWithRed:36.0/255.0 green:189.0/255.0 blue:155.0/255.0 alpha:1].CGColor;
-    adView.layer.cornerRadius = 10;
-    adView.layer.borderWidth = 2;
-    
-    self.testView = adView;
+    if (!useAdLoader) {
+        // 布置展示广告素材的 UIViews，可以通过新建 xib 文件或自定义 UIView 的子类
+        UIView *adView = [self.mixViewAd getAdView];
+        adView.frame = CGRectMake((ScreenWidth-adView.frame.size.width)/2, kTopBarSafeHeight+80, adView.frame.size.width, adView.frame.size.height);
+        // 展示广告
+        [adView setBackgroundColor:[UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]];
+        for (UIView *view in self.adView.subviews) {
+            [view removeFromSuperview];
+        }
+        
+        [self.adView addSubview:adView];
+//        adView.layer.borderColor = [UIColor colorWithRed:36.0/255.0 green:189.0/255.0 blue:155.0/255.0 alpha:1].CGColor;
+//        adView.layer.cornerRadius = 10;
+//        adView.layer.borderWidth = 2;
+    } else {
+        [AdLimeAdLoader showMixViewAd:self.adUnitID viewContainer:self.adView];
+    }
 }
 
 #pragma mark <AdLimeMixViewAdDelegate>
 - (void)adLimeMixViewAdDidReceiveAd:(AdLimeMixViewAd *)mixViewAd {
     NSLog(@"adLimeMixViewDidReceiveAd");
     [self showMixView];
+    self.adView.hidden = NO;
 }
 
 /// 广告加载失败

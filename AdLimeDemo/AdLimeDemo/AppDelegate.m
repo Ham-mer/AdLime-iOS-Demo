@@ -19,11 +19,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    //[AdLime setTestServer:@"https://sdktest.adlime.net/"];
     [AdLime initWithAppId:@"85f1d986-88e3-42f5-bd55-ffedea562215"];
     [AdLime setGdprConsent:true];
     [AdLime setTestMode:YES];
     [AdLime setLogEnable:YES];
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -32,7 +33,7 @@
     [self.window makeKeyAndVisible];
     
      [FBAdSettings setLogLevel:FBAdLogLevelVerbose];
-    [FBAdSettings addTestDevice:@"fbd5668ccaa053c497779efabc3b694e32957ef4"];
+    [FBAdSettings addTestDevice:@"cf3f4cbe3e144c9625edee0cede0b06276bb3423"];
     
     
     

@@ -171,30 +171,41 @@
 }
 
 - (void) loadNative {
-    AdLimeNetworkConfigs *configs = [[AdLimeNetworkConfigs alloc] init];
-    
-    AdLimeVungleInFeedConfig *config = [[AdLimeVungleInFeedConfig alloc] init];
-    [config setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 500)];
-    [configs addConfig:config];
-    
-    
-    self.nativeAd = [[AdLimeNativeAd alloc] initWithAdUnitId:self.adUnitID];
-    self.nativeAd.delegate = self;
-    [self.nativeAd setNativeAdLayout:self.nativeLayout];
-    [self.nativeAd setNetworkConfigs:configs];
-    
-    [self.nativeAd loadAd];
+    if (!useAdLoader) {
+        if (self.nativeAd == nil) {
+            AdLimeNetworkConfigs *configs = [[AdLimeNetworkConfigs alloc] init];
+            
+            AdLimeVungleInFeedConfig *config = [[AdLimeVungleInFeedConfig alloc] init];
+            [config setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 500)];
+            [configs addConfig:config];
+            
+            self.nativeAd = [[AdLimeNativeAd alloc] initWithAdUnitId:self.adUnitID];
+            self.nativeAd.delegate = self;
+            [self.nativeAd setNativeAdLayout:self.nativeLayout];
+            [self.nativeAd setNetworkConfigs:configs];
+        }
+        [self.nativeAd loadAd];
+    } else {
+        [AdLimeAdLoader loadNativeAd:self.adUnitID withLayout:self.nativeLayout andDelegate:self];
+    }
     
 }
 
 - (void)showNative {
-    if (self.nativeAd.isReady) {
-        UIView *adView = [self.nativeAd getAdView];
-        [self.nativeAdView addSubview:adView];
-        
-        adView.center = CGPointMake(self.nativeAdView.bounds.size.width/2, self.nativeAdView.bounds.size.height/2);
-        
-        self.nativeAdView.hidden = NO;
+    if (!useAdLoader) {
+        if (self.nativeAd.isReady) {
+            UIView *adView = [self.nativeAd getAdView];
+            [self.nativeAdView addSubview:adView];
+            
+            adView.center = CGPointMake(self.nativeAdView.bounds.size.width/2, self.nativeAdView.bounds.size.height/2);
+            
+            self.nativeAdView.hidden = NO;
+        }
+    } else {
+        if ([AdLimeAdLoader isNativeAdReady:self.adUnitID] ) {
+            [AdLimeAdLoader showNativeAd:self.adUnitID viewContainer:self.nativeAdView];
+            self.nativeAdView.hidden = NO;
+        }
     }
 }
 

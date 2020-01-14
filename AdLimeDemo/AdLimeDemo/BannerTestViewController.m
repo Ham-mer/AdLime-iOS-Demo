@@ -106,19 +106,35 @@
 
 
 - (void)creativeBanner {
-    self.bannerAd = [[AdLimeBannerView alloc] initWithAdUnitId:self.adUnitID rootViewController:self];
-    self.bannerAd.delegate = self;
-    
-    [self.banner addSubview:self.bannerAd];
+    if (!useAdLoader) {
+        self.bannerAd = [[AdLimeBannerView alloc] initWithAdUnitId:self.adUnitID rootViewController:self];
+        self.bannerAd.delegate = self;
+    }
 }
 
 - (void)loadBanner {
-    [self.bannerAd loadAd];
+    if (!useAdLoader) {
+        [self.bannerAd loadAd];
+    } else {
+        [AdLimeAdLoader loadBanner:self.adUnitID rootViewController:self withDelegate:self];
+    }
 }
 
 #pragma mark AdLimeBannerViewDelegate
 - (void)adLimeBannerDidReceiveAd:(AdLimeBannerView *)bannerView{
     NSLog(@"AdLimeBannerView adLimeBannerDidReceiveAd, bannerView.adUnitId is %@", bannerView.adUnitId);
+    
+    
+    if (!useAdLoader) {
+        for (UIView *view in self.banner.subviews) {
+            [view removeFromSuperview];
+        }
+        
+        [self.banner addSubview:self.bannerAd];
+    } else {
+        [AdLimeAdLoader showBanner:self.adUnitID viewContainer:self.banner];
+    }
+    
     self.banner.hidden = NO;
     
 //    self.bannerAd = bannerView;

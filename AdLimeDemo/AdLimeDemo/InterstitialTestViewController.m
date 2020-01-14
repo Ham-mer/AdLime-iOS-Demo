@@ -108,15 +108,28 @@
 
 #pragma  mark intersitial
 - (void) loadInteristial {
-    self.interstitalAd = [[AdLimeInterstitialAd alloc] initWithAdUnitId:self.adUnitID];
-    self.interstitalAd.delegate = self;
-    [self.interstitalAd loadAd];
+    if (!useAdLoader) {
+        if (self.interstitalAd == nil) {
+            self.interstitalAd = [[AdLimeInterstitialAd alloc] initWithAdUnitId:self.adUnitID];
+            self.interstitalAd.delegate = self;
+        }
+        [self.interstitalAd loadAd];
+    } else {
+        [AdLimeAdLoader loadInterstitialAd:self.adUnitID withDelegate:self];
+    }
+        
 }
 
 - (void)showInterstitial {
-    if (self.interstitalAd.isReady)
-    {
-        [self.interstitalAd showFromViewController:self];
+    if (!useAdLoader) {
+        if (self.interstitalAd.isReady)
+        {
+            [self.interstitalAd showFromViewController:self];
+        }
+    } else {
+        if ([AdLimeAdLoader isInterstitialAdReady:self.adUnitID]) {
+            [AdLimeAdLoader showInterstitialAd:self.adUnitID viewController:self];
+        }
     }
 }
 

@@ -94,8 +94,6 @@
     
     //[self createLayout];
     [self createDefaultLayout];
-    
-    [self createMixFullScreenAd];
 }
 
 - (void) closePage {
@@ -141,23 +139,30 @@
     self.nativeLayout = [AdLimeNativeAdLayout getFullLayout1];
 }
 
-- (void) createMixFullScreenAd {
-    self.mixFullScreenAd = [[AdLimeMixFullScreenAd alloc] initWithAdUnitId:self.adUnitID];
-    self.mixFullScreenAd.delegate = self;
-    [self.mixFullScreenAd setNativeAdLayout:self.nativeLayout];
-}
-
 #pragma  mark intersitial
 - (void) loadMixFullScreenAd {
-    if (self.mixFullScreenAd != nil) {
+    if (!useAdLoader) {
+        if (self.mixFullScreenAd == nil) {
+            self.mixFullScreenAd = [[AdLimeMixFullScreenAd alloc] initWithAdUnitId:self.adUnitID];
+            self.mixFullScreenAd.delegate = self;
+            [self.mixFullScreenAd setNativeAdLayout:self.nativeLayout];
+        }
         [self.mixFullScreenAd loadAd];
+    } else {
+        [AdLimeAdLoader loadMixFullScreenAd:self.adUnitID withLayout:self.nativeLayout andDelegate:self];
     }
 }
 
 - (void)showMixFullScreenAd {
-    if (self.mixFullScreenAd.isReady)
-    {
-        [self.mixFullScreenAd showFromViewController:self];
+    if (!useAdLoader) {
+        if (self.mixFullScreenAd.isReady)
+        {
+            [self.mixFullScreenAd showFromViewController:self];
+        }
+    } else {
+        if ([AdLimeAdLoader isMixFullScreenAdReady:self.adUnitID]) {
+            [AdLimeAdLoader showMixFullScreenAd:self.adUnitID viewController:self];
+        }
     }
 }
 

@@ -19,4 +19,6 @@
 #define kTopBarSafeHeight   (CGFloat)(IS_IPHONEX?(64):(20))
 #define kBottomSafeHeight   (CGFloat)(IS_IPHONEX?(34):(0))
 
+#define useAdLoader 1
+
 #endif /* macro_h */

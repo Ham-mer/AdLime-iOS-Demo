@@ -15,7 +15,7 @@ target 'AdLimeDemo' do
     pod 'AdLimeMediation_GoogleAds'
     pod 'AdLimeMediation_Amazon'
     pod 'AdLimeMediation_AppLovin'
-    pod 'AdLimeMediation_AdColony
+    pod 'AdLimeMediation_AdColony'
     pod 'AdLimeMediation_AdGeneration'
     pod 'AdLimeMediation_Facebook'
     pod 'AdLimeMediation_Five'
@@ -23,8 +23,8 @@ target 'AdLimeDemo' do
     pod 'AdLimeMediation_Chartboost'
     pod 'AdLimeMediation_Criteo'
     pod 'AdLimeMediation_Flurry'
-    pod 'Fyber_Marketplace_SDK', '7.4.1'
     pod 'AdLimeMediation_Fyber'
+    pod 'AdLimeMediation_Imobile'
     pod 'AdLimeMediation_IronSource'
     pod 'AdLimeMediation_Maio'
     pod 'AdLimeMediation_MoPub'
