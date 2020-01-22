@@ -150,7 +150,8 @@
         }
         [self.mixViewAd loadAd];
     } else {
-       [AdLimeAdLoader loadMixViewAd:self.adUnitID rootViewController:self withLayout:self.nativeLayout andDelegate:self];
+        [AdLimeAdLoader getMixViewAd:self.adUnitID rootViewController:self].delegate = self;
+        [AdLimeAdLoader loadMixViewAd:self.adUnitID rootViewController:self nativeAdLayout:self.nativeLayout];
     }
 }
 
@@ -170,7 +171,7 @@
 //        adView.layer.cornerRadius = 10;
 //        adView.layer.borderWidth = 2;
     } else {
-        [AdLimeAdLoader showMixViewAd:self.adUnitID viewContainer:self.adView];
+        [AdLimeAdLoader showMixViewAd:self.adUnitID container:self.adView];
     }
 }
 

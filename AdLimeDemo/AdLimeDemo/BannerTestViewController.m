@@ -116,7 +116,8 @@
     if (!useAdLoader) {
         [self.bannerAd loadAd];
     } else {
-        [AdLimeAdLoader loadBanner:self.adUnitID rootViewController:self withDelegate:self];
+        [AdLimeAdLoader getBannerAdView:self.adUnitID rootViewController:self].delegate = self;;
+        [AdLimeAdLoader loadBanner:self.adUnitID rootViewController:self];
     }
 }
 
@@ -132,7 +133,7 @@
         
         [self.banner addSubview:self.bannerAd];
     } else {
-        [AdLimeAdLoader showBanner:self.adUnitID viewContainer:self.banner];
+        [AdLimeAdLoader showBanner:self.adUnitID container:self.banner];
     }
     
     self.banner.hidden = NO;

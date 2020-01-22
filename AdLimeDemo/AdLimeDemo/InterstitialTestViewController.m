@@ -115,7 +115,8 @@
         }
         [self.interstitalAd loadAd];
     } else {
-        [AdLimeAdLoader loadInterstitialAd:self.adUnitID withDelegate:self];
+        [AdLimeAdLoader getInterstitialAd:self.adUnitID].delegate = self;
+        [AdLimeAdLoader loadInterstitialAd:self.adUnitID];
     }
         
 }

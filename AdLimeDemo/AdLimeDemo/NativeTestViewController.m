@@ -10,8 +10,8 @@
 @import AdLimeSdk;
 #import "Masonry.h"
 #import "util/macro.h"
-#import <AdLimeMediation_Vungle/AdLimeMediation_Vungle.h>
 #import "util/UIView+Toast.h"
+//#import <AdLimeMediation_Vungle/AdLimeMediation_Vungle.h>
 
 @interface NativeTestViewController () <AdLimeNativeAdDelegate>
 
@@ -175,9 +175,9 @@
         if (self.nativeAd == nil) {
             AdLimeNetworkConfigs *configs = [[AdLimeNetworkConfigs alloc] init];
             
-            AdLimeVungleInFeedConfig *config = [[AdLimeVungleInFeedConfig alloc] init];
-            [config setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 500)];
-            [configs addConfig:config];
+//            AdLimeVungleInFeedConfig *config = [[AdLimeVungleInFeedConfig alloc] init];
+//            [config setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 500)];
+//            [configs addConfig:config];
             
             self.nativeAd = [[AdLimeNativeAd alloc] initWithAdUnitId:self.adUnitID];
             self.nativeAd.delegate = self;
@@ -186,7 +186,8 @@
         }
         [self.nativeAd loadAd];
     } else {
-        [AdLimeAdLoader loadNativeAd:self.adUnitID withLayout:self.nativeLayout andDelegate:self];
+        [AdLimeAdLoader getNativeAd:self.adUnitID].delegate = self;
+        [AdLimeAdLoader loadNativeAd:self.adUnitID nativeAdLayout:self.nativeLayout];
     }
     
 }
@@ -203,7 +204,7 @@
         }
     } else {
         if ([AdLimeAdLoader isNativeAdReady:self.adUnitID] ) {
-            [AdLimeAdLoader showNativeAd:self.adUnitID viewContainer:self.nativeAdView];
+            [AdLimeAdLoader showNativeAd:self.adUnitID container:self.nativeAdView];
             self.nativeAdView.hidden = NO;
         }
     }

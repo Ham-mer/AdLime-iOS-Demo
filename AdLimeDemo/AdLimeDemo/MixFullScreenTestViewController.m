@@ -149,7 +149,8 @@
         }
         [self.mixFullScreenAd loadAd];
     } else {
-        [AdLimeAdLoader loadMixFullScreenAd:self.adUnitID withLayout:self.nativeLayout andDelegate:self];
+        [AdLimeAdLoader getMixFullScreenAd:self.adUnitID].delegate = self;
+        [AdLimeAdLoader loadMixFullScreenAd:self.adUnitID nativeAdLayout:self.nativeLayout];
     }
 }
 

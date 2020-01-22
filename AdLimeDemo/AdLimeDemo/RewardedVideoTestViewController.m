@@ -113,7 +113,8 @@
         }
         [self.rewardAd loadAd];
     } else {
-        [AdLimeAdLoader loadRewardedVideoAd:self.adUnitID withDelegate:self];
+        [AdLimeAdLoader getRewardedVideoAd:self.adUnitID].delegate = self;
+        [AdLimeAdLoader loadRewardedVideoAd:self.adUnitID];
     }
 }
 

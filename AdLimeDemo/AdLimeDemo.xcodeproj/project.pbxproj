@@ -183,7 +183,6 @@
 				D48F80252302B89E0028135D /* Frameworks */,
 				D48F80262302B89E0028135D /* Resources */,
 				0F437984FBC61B4CCC0522FF /* [CP] Embed Pods Frameworks */,
-				19D2180CC1C9CC703E7AE0B6 /* [CP] Copy Pods Resources */,
 				D4A9DA48238E4A9A0022E6CB /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -255,23 +254,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		19D2180CC1C9CC703E7AE0B6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C4AB76B7CAC60BB98FDA8C10 /* [CP] Check Pods Manifest.lock */ = {

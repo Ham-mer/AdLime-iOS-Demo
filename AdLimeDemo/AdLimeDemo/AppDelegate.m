@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 @import AdLimeSdk;
 #import "HomeViewController.h"
-#import <FBAudienceNetwork/FBAudienceNetwork.h>
 
 @interface AppDelegate ()
 
@@ -31,11 +30,6 @@
     HomeViewController *vc = [[HomeViewController alloc] init];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
-    
-     [FBAdSettings setLogLevel:FBAdLogLevelVerbose];
-    [FBAdSettings addTestDevice:@"cf3f4cbe3e144c9625edee0cede0b06276bb3423"];
-    
-    
     
     return YES;
 }
