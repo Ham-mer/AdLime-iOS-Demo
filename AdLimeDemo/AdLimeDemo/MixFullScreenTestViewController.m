@@ -136,7 +136,7 @@
 }
 
 - (void)createDefaultLayout {
-    self.nativeLayout = [AdLimeNativeAdLayout getFullLayout1];
+    self.nativeLayout = [AdLimeNativeAdLayout getFullLayout2];
 }
 
 #pragma  mark intersitial

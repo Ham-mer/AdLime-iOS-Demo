@@ -88,7 +88,7 @@
         make.top.equalTo(loadNativeBtn.mas_bottom).offset(20);
         make.left.equalTo(self.view).offset(10);
         make.right.equalTo(self.view).offset(-10);
-        make.height.equalTo(@(340));
+        make.bottom.equalTo(self.view).offset(-20);
     }];
 
     adView.hidden = YES;
@@ -137,7 +137,7 @@
 }
 
 - (void)createDefaultLayout {
-    self.nativeLayout = [AdLimeNativeAdLayout getLargeLayout1WithWidth:ScreenWidth-20];
+    self.nativeLayout = [AdLimeNativeAdLayout getLargeLayout3WithWidth:ScreenWidth-20];
 }
 
 - (void) loadMixView {

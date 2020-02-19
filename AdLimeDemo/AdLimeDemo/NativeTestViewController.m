@@ -87,8 +87,8 @@
     
     self.showNativeBtn = loadNativeBtn;
     
-     [self createNativeAd];    // nativeLayout
-    //[self createDefaultNativeAd]; //get default NativeLayout
+     //[self createNativeAd];    // nativeLayout
+    [self createDefaultNativeAd]; //get default NativeLayout
 }
 
 - (void) closePage {
@@ -109,7 +109,7 @@
         make.top.equalTo(self.showNativeBtn.mas_bottom).offset(10);
         make.left.equalTo(self.view).offset(10);
         make.right.equalTo(self.view).offset(-10);
-        make.height.equalTo(@(250));
+        make.bottom.equalTo(self.view).offset(-20);
     }];
     
     adView.hidden = YES;
@@ -162,12 +162,12 @@
         make.top.equalTo(self.showNativeBtn.mas_bottom).offset(10);
         make.left.equalTo(self.view).offset(10);
         make.right.equalTo(self.view).offset(-10);
-        make.height.equalTo(@(340));
+        make.bottom.equalTo(self.view).offset(-20);
     }];
 
     adView.hidden = YES;
     
-    self.nativeLayout = [AdLimeNativeAdLayout getLargeLayout1WithWidth:ScreenWidth-20];
+    self.nativeLayout = [AdLimeNativeAdLayout getLargeLayout2WithWidth:ScreenWidth-20];
 }
 
 - (void) loadNative {
@@ -198,7 +198,11 @@
             UIView *adView = [self.nativeAd getAdView];
             [self.nativeAdView addSubview:adView];
             
-            adView.center = CGPointMake(self.nativeAdView.bounds.size.width/2, self.nativeAdView.bounds.size.height/2);
+            //adView.center = CGPointMake(self.nativeAdView.bounds.size.width/2, self.nativeAdView.bounds.size.height/2);
+            [adView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(self.nativeAdView);
+                make.centerY.equalTo(self.nativeAdView);
+            }];
             
             self.nativeAdView.hidden = NO;
         }

@@ -51,7 +51,6 @@
 		D48F80372302B89F0028135D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48F80392302B89F0028135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D48F803A2302B89F0028135D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D4A9DA42238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdLimeMediation_DisplayIO.framework; sourceTree = "<group>"; };
 		D4C2DAD623580FEE00524075 /* AdTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTypeViewController.h; sourceTree = "<group>"; };
 		D4C2DAD723580FEE00524075 /* AdTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTypeViewController.m; sourceTree = "<group>"; };
 		D4C2DAD923580FF700524075 /* BannerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerTestViewController.m; sourceTree = "<group>"; };
@@ -130,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				D4CCC5B92396732E007089AE /* util */,
-				D4A9DA42238E496D0022E6CB /* AdLimeMediation_DisplayIO.framework */,
 				D4C2DAD623580FEE00524075 /* AdTypeViewController.h */,
 				D4C2DAD723580FEE00524075 /* AdTypeViewController.m */,
 				D4C2DADA23580FF800524075 /* BannerTestViewController.h */,
