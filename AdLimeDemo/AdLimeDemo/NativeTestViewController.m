@@ -87,8 +87,8 @@
     
     self.showNativeBtn = loadNativeBtn;
     
-     //[self createNativeAd];    // nativeLayout
-    [self createDefaultNativeAd]; //get default NativeLayout
+     [self createNativeAd];    // nativeLayout
+    //[self createDefaultNativeAd]; //get default NativeLayout
 }
 
 - (void) closePage {
@@ -115,6 +115,11 @@
     adView.hidden = YES;
     
     UIView *rootView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth-20, 250)];
+    
+    [rootView mas_makeConstraints:^(MASConstraintMaker *make) {
+           make.width.equalTo(@(ScreenWidth-20));
+           make.height.equalTo(@(250));
+    }];
     
     UIView *mediaView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth-20, 150)];
     [rootView addSubview:mediaView];
