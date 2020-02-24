@@ -175,6 +175,14 @@
 //        adView.layer.borderColor = [UIColor colorWithRed:36.0/255.0 green:189.0/255.0 blue:155.0/255.0 alpha:1].CGColor;
 //        adView.layer.cornerRadius = 10;
 //        adView.layer.borderWidth = 2;
+        
+        [adView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self.adView);
+            make.centerX.equalTo(self.adView);
+            make.width.equalTo(@(adView.bounds.size.width));
+            make.height.equalTo(@(adView.bounds.size.width));
+        }];
+        
     } else {
         [AdLimeAdLoader showMixViewAd:self.adUnitID container:self.adView];
     }
