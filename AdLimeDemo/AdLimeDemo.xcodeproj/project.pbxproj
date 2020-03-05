@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22F6C6BF23D820CA00F04EDA /* AdLimeSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F6C6BE23D820CA00F04EDA /* AdLimeSdk.framework */; };
 		D48F802D2302B89E0028135D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F802C2302B89E0028135D /* AppDelegate.m */; };
 		D48F80352302B89F0028135D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48F80342302B89F0028135D /* Assets.xcassets */; };
 		D48F80382302B89F0028135D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F80362302B89F0028135D /* LaunchScreen.storyboard */; };
@@ -44,6 +43,7 @@
 		57075ED4FEBC187AD1F939EC /* Pods-AdLimeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLimeDemo.debug.xcconfig"; path = "Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9A477D01FA72F96A8D2E6A2D /* Pods-AdLimeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLimeDemo.release.xcconfig"; path = "Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdLimeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D479A8412410CDBB0093F645 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D48F80282302B89E0028135D /* AdLimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdLimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48F802B2302B89E0028135D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D48F802C2302B89E0028135D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +51,7 @@
 		D48F80372302B89F0028135D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48F80392302B89F0028135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D48F803A2302B89F0028135D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4AE672C240F91C4006E640F /* AdLimeCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdLimeCore.framework; path = Pods/AdLimeSdk/1.6.7/AdLimeCore.framework; sourceTree = "<group>"; };
 		D4C2DAD623580FEE00524075 /* AdTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTypeViewController.h; sourceTree = "<group>"; };
 		D4C2DAD723580FEE00524075 /* AdTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTypeViewController.m; sourceTree = "<group>"; };
 		D4C2DAD923580FF700524075 /* BannerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerTestViewController.m; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F6C6BF23D820CA00F04EDA /* AdLimeSdk.framework in Frameworks */,
 				EE8B0990B91AF3B9F45ACAA3 /* Pods_AdLimeDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +101,7 @@
 		CFD1ED5558A3A2B2571C0CDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4AE672C240F91C4006E640F /* AdLimeCore.framework */,
 				22F6C6BE23D820CA00F04EDA /* AdLimeSdk.framework */,
 				D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */,
 			);
@@ -214,6 +215,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = D48F801F2302B89E0028135D;
 			productRefGroup = D48F80292302B89E0028135D /* Products */;
@@ -324,6 +326,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D48F80372302B89F0028135D /* Base */,
+				D479A8412410CDBB0093F645 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -394,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -455,6 +460,7 @@
 					"$(PROJECT_DIR)/AdLimeDemo/framework",
 					"$(PROJECT_DIR)/AdLimeDemo",
 					"$(PROJECT_DIR)/Pods",
+					"$(PROJECT_DIR)/Pods/AdLimeSdk/1.6.7",
 				);
 				INFOPLIST_FILE = AdLimeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -484,6 +490,7 @@
 					"$(PROJECT_DIR)/AdLimeDemo/framework",
 					"$(PROJECT_DIR)/AdLimeDemo",
 					"$(PROJECT_DIR)/Pods",
+					"$(PROJECT_DIR)/Pods/AdLimeSdk/1.6.7",
 				);
 				INFOPLIST_FILE = AdLimeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
