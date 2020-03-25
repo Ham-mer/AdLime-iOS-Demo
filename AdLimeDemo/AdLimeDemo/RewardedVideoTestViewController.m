@@ -67,7 +67,7 @@
     
     UIButton *loadRewardBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:loadRewardBtn];
-    [loadRewardBtn setTitle:@"load Reward" forState:UIControlStateNormal];
+    [loadRewardBtn setTitle:@"load" forState:UIControlStateNormal];
     //[loadRewardBtn setBackgroundColor:[UIColor blueColor]];
     [loadRewardBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0]  forState:UIControlStateNormal];
     [loadRewardBtn setTitleColor:[UIColor colorWithRed:135.0/255.0 green:216.0/255.0 blue:80.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];
@@ -76,7 +76,7 @@
     
     UIButton *rewardShowBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:rewardShowBtn];
-    [rewardShowBtn setTitle:@"show Reward" forState:UIControlStateNormal];
+    [rewardShowBtn setTitle:@"show" forState:UIControlStateNormal];
     //[rewardShowBtn setBackgroundColor:[UIColor blueColor]];
     [rewardShowBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0]  forState:UIControlStateNormal];
     [rewardShowBtn setTitleColor:[UIColor colorWithRed:135.0/255.0 green:216.0/255.0 blue:80.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];

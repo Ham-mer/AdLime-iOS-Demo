@@ -73,7 +73,7 @@
 
 - (void) testBase {
     AdTypeViewController *vc = [[AdTypeViewController alloc] init];
-    NSArray *ads = @[@[@"Banner", @"52040363-01ed-44c3-b204-154e28cd0a4d"], @[@"Banner_300*250", @"573c18f4-7472-4987-b718-c124b154675f"],  @[@"Interstitial", @"03e88f50-f414-41dd-ba19-3702fd360b4c"], @[@"Native", @"d47cd3c3-b8a7-4902-871a-2a8ca5657626"], @[@"RewardedVideo", @"8ef45a9e-74cf-4fa6-84d8-3c07fdedc0c7"], @[@"MixView", @"59445d92-28af-41b1-9a3f-7c2a192a3bda"], @[@"MixFullScreen", @"c9d0819a-deef-4bd2-b038-b8686ffd82be"]];
+    NSArray *ads = @[@{@"Banner": @[@{@"320*50": @"52040363-01ed-44c3-b204-154e28cd0a4d"}, @{@"300*250": @"573c18f4-7472-4987-b718-c124b154675f"}]}, @{@"Interstitial": @[@{@"interstitial" : @"03e88f50-f414-41dd-ba19-3702fd360b4c"}]}, @{@"Native": @[@{@"native": @"d47cd3c3-b8a7-4902-871a-2a8ca5657626"}]}, @{@"RewardedVideo":@[@{@"RewardedVideo": @"8ef45a9e-74cf-4fa6-84d8-3c07fdedc0c7"}]}, @{@"MixView": @[@{@"banner": @"59445d92-28af-41b1-9a3f-7c2a192a3bda"}]}, @{@"MixFullScreen":@[@{@"banner" : @"c9d0819a-deef-4bd2-b038-b8686ffd82be"}]}];
     vc.adsDic = ads;
     vc.titleStr = @"Basic Test";
     vc.modalPresentationStyle = 0;

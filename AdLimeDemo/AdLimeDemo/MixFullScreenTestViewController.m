@@ -58,9 +58,18 @@
         make.width.equalTo(@(50));
     }];
     
+    UIView *line = [[UIView alloc] init];
+    line.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:line];
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(header.mas_bottom).offset(1);
+        make.height.equalTo(@1);
+    }];
+    
     UIButton *testloadIntBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:testloadIntBtn];
-    [testloadIntBtn setTitle:@"load mixfullscreen" forState:UIControlStateNormal];
+    [testloadIntBtn setTitle:@"load" forState:UIControlStateNormal];
     //[testloadIntBtn setBackgroundColor:[UIColor blueColor]];
     [testloadIntBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0]  forState:UIControlStateNormal];
     [testloadIntBtn setTitleColor:[UIColor colorWithRed:135.0/255.0 green:216.0/255.0 blue:80.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];
@@ -69,7 +78,7 @@
     
     UIButton *testshowIntBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:testshowIntBtn];
-    [testshowIntBtn setTitle:@"show mixfullscreen" forState:UIControlStateNormal];
+    [testshowIntBtn setTitle:@"show" forState:UIControlStateNormal];
     //[testshowIntBtn setBackgroundColor:[UIColor blueColor]];
     [testshowIntBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0]  forState:UIControlStateNormal];
     [testshowIntBtn setTitleColor:[UIColor colorWithRed:135.0/255.0 green:216.0/255.0 blue:80.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];

@@ -67,7 +67,7 @@
     
     UIButton *testBannerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:testBannerBtn];
-    [testBannerBtn setTitle:@"load banner" forState:UIControlStateNormal];
+    [testBannerBtn setTitle:@"load" forState:UIControlStateNormal];
     [testBannerBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     [testBannerBtn setTitleColor:[UIColor colorWithRed:135.0/255.0 green:216.0/255.0 blue:80.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];
     [testBannerBtn setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateDisabled];
@@ -83,15 +83,18 @@
     UIView *banner = [[UIView alloc] init];
     [banner setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:banner];
+    banner.layer.borderColor = [UIColor redColor].CGColor;
+    banner.layer.borderWidth = 2;
     
     [banner mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.top.equalTo(testBannerBtn.mas_bottom).offset(80);
-        if (self.bannerSize == ADLIME_BANNER_SIZE_300_250) {
-            make.height.equalTo(@(250));
-        } else {
-            make.height.equalTo(@(50));
-        }
+        make.top.equalTo(testBannerBtn.mas_bottom).offset(50);
+        make.bottom.equalTo(self.view).offset(-20);
+//        if (self.bannerSize == ADLIME_BANNER_SIZE_300_250) {
+//            make.height.equalTo(@(250));
+//        } else {
+//            make.height.equalTo(@(50));
+//        }
     }];
     
     self.banner = banner;

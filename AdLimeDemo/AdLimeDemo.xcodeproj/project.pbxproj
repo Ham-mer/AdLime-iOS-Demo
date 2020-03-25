@@ -43,7 +43,6 @@
 		57075ED4FEBC187AD1F939EC /* Pods-AdLimeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLimeDemo.debug.xcconfig"; path = "Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9A477D01FA72F96A8D2E6A2D /* Pods-AdLimeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLimeDemo.release.xcconfig"; path = "Target Support Files/Pods-AdLimeDemo/Pods-AdLimeDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D3CA7A8BCC674AD6C8219926 /* Pods_AdLimeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdLimeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D479A8412410CDBB0093F645 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D48F80282302B89E0028135D /* AdLimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdLimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48F802B2302B89E0028135D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D48F802C2302B89E0028135D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -215,7 +214,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ja,
 			);
 			mainGroup = D48F801F2302B89E0028135D;
 			productRefGroup = D48F80292302B89E0028135D /* Products */;
@@ -326,7 +324,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D48F80372302B89F0028135D /* Base */,
-				D479A8412410CDBB0093F645 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
