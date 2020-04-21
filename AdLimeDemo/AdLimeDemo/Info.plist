@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppLovinSdkKey</key>
-	<string>aqULsa4oR7H9uQJrVI4-hGyFMgAc_RwZFPv6-zvQ5AZzbup5At4t806UgH6fi1DzQ74O5zpA8N8kGyqRquIyuO</string>
+	<string>qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR1136N8uhTlthKc</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-3940256099942544~1458002511</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -48,7 +48,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-    <key>UIUserInterfaceStyle</key>
-    <string>UIUserInterfaceStyleLight</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>UIUserInterfaceStyleLight</string>
 </dict>
 </plist>
